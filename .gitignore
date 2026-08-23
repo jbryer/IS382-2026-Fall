@@ -6,3 +6,6 @@
 .quarto
 private/
 Meetups/
+
+/.quarto/
+**/*.quarto_ipynb
