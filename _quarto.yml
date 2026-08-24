@@ -8,6 +8,7 @@ project:
   - "!slides/"
   - "!assignments/"
   pre-render:
+    - "touch schedule.qmd"
     - build_pdf_slides.R
     - build_posts.R
   post-render:
@@ -16,7 +17,8 @@ project:
     - "cp -rf slides/ docs/slides/"
 
 website:
-  # announcement:
+  announcement:
+    content: "Our first meetup will be Monday, August 31st at 7:00pm. [Click here to join.](https://us02web.zoom.us/j/84988569164?pwd=FWEeLQ4WRFU3uyJ6pNNh7dCyrlTFsZ.1)"
   #   content: "[Click here]() to the join the Slack channel."
   #   # position: below-navbar # above-navbar or below-navbar
   #   icon: slack #info-circle # https://icons.getbootstrap.com
@@ -101,36 +103,34 @@ website:
             text: "Textbooks"
       - section: "Topics"
         contents:
-          - href: modules/01-Module.qmd
-            text: "1 - Introduction to the course"
-          - href: modules/02-Module.qmd
-            text: "2 - Introduction to Modeling"
-          - href: modules/03-Module.qmd
-            text: "3 - Linear regression"
-          - href: modules/04-Module.qmd
-            text: "4 - Multiple regression"
-          - href: modules/05-Module.qmd
-            text: "5 - Logistic Regression"
-          - href: modules/06-Module.qmd
-            text: "6 - Generative Models for Classification"
-          - href: modules/07-Module.qmd
-            text: "7 - Resampling Methods"
-          - href: modules/08-Module.qmd
-            text: "8 - Tree Based Methods"
-          - href: modules/09-Module.qmd
-            text: "9 - Bagging and Random Forests"
-          - href: modules/10-Module.qmd
-            text: "10 - Support Vector Machines"
-          - href: modules/11-Module.qmd
-            text: "11 - Principal Component Analysis"
-          - href: modules/12-Module.qmd
-            text: "12 - Clustering Methods"
-          - href: modules/13-Module.qmd
-            text: "13 - Missing data"
-          - href: modules/14-Module.qmd
-            text: "14 - Bayesian Analysis"
-          # - href: modules/15-Module.qmd
-          #   text: "15 - Wrap up / Final Presentations"
+          - href: modules/00-Intro_to_Course.qmd
+            text: "Introduction to the course"
+          - href: modules/01-Intro_to_Modeling.qmd
+            text: "1 - Introduction to Modeling"
+          - href: modules/02-Linear_Regression.qmd
+            text: "2 - Linear regression"
+          - href: modules/03-Multiple_Regression.qmd
+            text: "3 - Multiple regression"
+          - href: modules/04-Logistic_Regression.qmd
+            text: "4 - Logistic Regression"
+          - href: modules/05-Generative_Models.qmd
+            text: "5 - Generative Models for Classification"
+          - href: modules/06-Resampling_Methods.qmd
+            text: "6 - Resampling Methods"
+          - href: modules/07-Tree_Models.qmd
+            text: "7 - Tree Based Methods"
+          - href: modules/08-Bagging_and_Random_Forests.qmd
+            text: "8 - Bagging and Random Forests"
+          - href: modules/09-Support_Vector_Machines.qmd
+            text: "9 - Support Vector Machines"
+          - href: modules/10-Principal_Component_Analysis.qmd
+            text: "10 - Principal Component Analysis"
+          - href: modules/11-Cluster_Methods.qmd
+            text: "11 - Clustering Methods"
+          - href: modules/12-Missing_Data.qmd
+            text: "12 - Missing data"
+          - href: modules/13-Bayesian_Analysis.qmd
+            text: "13 - Bayesian Analysis"
 
 format:
   html:

@@ -16,6 +16,7 @@ formative_assessmnet_results <- ''
 slack_invite_link <- 'https://cuny-msds.slack.com/archives/C0BLVF2MJ7Q'
 slack_link <- 'https://cuny-msds.slack.com'
 course_link <- paste0('https://', github_user, '.github.io/', github_repo)
+meetup_link <- 'https://us02web.zoom.us/j/84988569164?pwd=FWEeLQ4WRFU3uyJ6pNNh7dCyrlTFsZ.1'
 
 cuny_colors <- c('#0033A1', '#FFB71B', '#9A3CB0', '#A3C9FF', '#EA0045', '#45C2B1')
 

@@ -77,284 +77,245 @@
     ]
   },
   {
-    "objectID": "modules/15-Module.html#assignments",
-    "href": "modules/15-Module.html#assignments",
-    "title": "Wrap-Up",
+    "objectID": "modules/13-Bayesian_Analysis.html",
+    "href": "modules/13-Bayesian_Analysis.html",
+    "title": "Bayesian Analysis",
+    "section": "",
+    "text": "Chapter 17 of Learning Statistics with R (Navarro, version 0.6)\nFitting a Model by Maximum Likelihood (Collier, 2013).\nKruschke’s website for Doing Bayesian Data Analysis\nKruschke’s blog\nAndrew Gelman’s blog - Posts about bayesian statistics",
+    "crumbs": [
+      "Topics",
+      "13 - Bayesian Analysis"
+    ]
+  },
+  {
+    "objectID": "modules/13-Bayesian_Analysis.html#readings",
+    "href": "modules/13-Bayesian_Analysis.html#readings",
+    "title": "Bayesian Analysis",
+    "section": "",
+    "text": "Chapter 17 of Learning Statistics with R (Navarro, version 0.6)\nFitting a Model by Maximum Likelihood (Collier, 2013).\nKruschke’s website for Doing Bayesian Data Analysis\nKruschke’s blog\nAndrew Gelman’s blog - Posts about bayesian statistics",
+    "crumbs": [
+      "Topics",
+      "13 - Bayesian Analysis"
+    ]
+  },
+  {
+    "objectID": "modules/13-Bayesian_Analysis.html#supplemental-videos",
+    "href": "modules/13-Bayesian_Analysis.html#supplemental-videos",
+    "title": "Bayesian Analysis",
+    "section": "Supplemental Videos",
+    "text": "Supplemental Videos\n\nRasmus Bååth’s Introduction to Bayesian Data Analysis Video Series\n\n\n\n\n\n\n\n\nJohn Kruschke’s Video Series\nBayesian Methods Interpret Data Better\n\n\nBayesian Estimation Supersedes the t Test\n\n\nPrecision is the goal",
+    "crumbs": [
+      "Topics",
+      "13 - Bayesian Analysis"
+    ]
+  },
+  {
+    "objectID": "modules/11-Cluster_Methods.html",
+    "href": "modules/11-Cluster_Methods.html",
+    "title": "Cluster Methods",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 12.3 and 12.4.",
+    "crumbs": [
+      "Topics",
+      "11 - Clustering Methods"
+    ]
+  },
+  {
+    "objectID": "modules/11-Cluster_Methods.html#readings",
+    "href": "modules/11-Cluster_Methods.html#readings",
+    "title": "Cluster Methods",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 12.3 and 12.4.",
+    "crumbs": [
+      "Topics",
+      "11 - Clustering Methods"
+    ]
+  },
+  {
+    "objectID": "modules/11-Cluster_Methods.html#assignments",
+    "href": "modules/11-Cluster_Methods.html#assignments",
+    "title": "Cluster Methods",
     "section": "Assignments",
-    "text": "Assignments"
-  },
-  {
-    "objectID": "modules/13-Module.html",
-    "href": "modules/13-Module.html",
-    "title": "Missing Data",
-    "section": "",
-    "text": "Van Buuren & Groothuis-Oudshoorn (2011). mice: Multivariate imputation by chained equations. Journal of Statistical Software. https://www.jstatsoft.org/article/view/v045i03.",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nClustering Methods Lab (PDF, Rmarkdown)",
     "crumbs": [
       "Topics",
-      "13 - Missing data"
+      "11 - Clustering Methods"
     ]
   },
   {
-    "objectID": "modules/13-Module.html#readings",
-    "href": "modules/13-Module.html#readings",
-    "title": "Missing Data",
+    "objectID": "modules/09-Support_Vector_Machines.html",
+    "href": "modules/09-Support_Vector_Machines.html",
+    "title": "Support Vector Machines",
     "section": "",
-    "text": "Van Buuren & Groothuis-Oudshoorn (2011). mice: Multivariate imputation by chained equations. Journal of Statistical Software. https://www.jstatsoft.org/article/view/v045i03.",
+    "text": "An Introduction to Statistical Learning chapter 9.",
     "crumbs": [
       "Topics",
-      "13 - Missing data"
+      "9 - Support Vector Machines"
     ]
   },
   {
-    "objectID": "modules/13-Module.html#assignments",
-    "href": "modules/13-Module.html#assignments",
-    "title": "Missing Data",
+    "objectID": "modules/09-Support_Vector_Machines.html#readings",
+    "href": "modules/09-Support_Vector_Machines.html#readings",
+    "title": "Support Vector Machines",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 9.",
+    "crumbs": [
+      "Topics",
+      "9 - Support Vector Machines"
+    ]
+  },
+  {
+    "objectID": "modules/09-Support_Vector_Machines.html#assignments",
+    "href": "modules/09-Support_Vector_Machines.html#assignments",
+    "title": "Support Vector Machines",
     "section": "Assignments",
-    "text": "Assignments\nThis week you should be preparing your project presentation.",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nSupport Vector Machines Lab (PDF, Rmarkdown)",
     "crumbs": [
       "Topics",
-      "13 - Missing data"
+      "9 - Support Vector Machines"
     ]
   },
   {
-    "objectID": "modules/11-Module.html",
-    "href": "modules/11-Module.html",
-    "title": "Principal Component Analysis",
+    "objectID": "modules/07-Tree_Models.html",
+    "href": "modules/07-Tree_Models.html",
+    "title": "Tree Based Methods",
     "section": "",
-    "text": "An Introduction to Statistical Learning chapter 12.1 and 12.2.",
+    "text": "An Introduction to Statistical Learning chapter 8.1.",
     "crumbs": [
       "Topics",
-      "11 - Principal Component Analysis"
+      "7 - Tree Based Methods"
     ]
   },
   {
-    "objectID": "modules/11-Module.html#readings",
-    "href": "modules/11-Module.html#readings",
-    "title": "Principal Component Analysis",
+    "objectID": "modules/07-Tree_Models.html#readings",
+    "href": "modules/07-Tree_Models.html#readings",
+    "title": "Tree Based Methods",
     "section": "",
-    "text": "An Introduction to Statistical Learning chapter 12.1 and 12.2.",
+    "text": "An Introduction to Statistical Learning chapter 8.1.",
     "crumbs": [
       "Topics",
-      "11 - Principal Component Analysis"
+      "7 - Tree Based Methods"
     ]
   },
   {
-    "objectID": "modules/11-Module.html#assignments",
-    "href": "modules/11-Module.html#assignments",
-    "title": "Principal Component Analysis",
+    "objectID": "modules/07-Tree_Models.html#assignments",
+    "href": "modules/07-Tree_Models.html#assignments",
+    "title": "Tree Based Methods",
     "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nPrincipal Component Analysis Lab (PDF, Rmarkdown)",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nTree Based Methods Lab (PDF, Rmarkdown)",
     "crumbs": [
       "Topics",
-      "11 - Principal Component Analysis"
+      "7 - Tree Based Methods"
     ]
   },
   {
-    "objectID": "modules/09-Module.html",
-    "href": "modules/09-Module.html",
-    "title": "Bagging and Random Forests",
+    "objectID": "modules/05-Generative_Models.html",
+    "href": "modules/05-Generative_Models.html",
+    "title": "Generative Methods for Classification",
     "section": "",
-    "text": "An Introduction to Statistical Learning chapter 8.2.",
+    "text": "An Introduction to Statistical Learning chapter 4.",
     "crumbs": [
       "Topics",
-      "9 - Bagging and Random Forests"
+      "5 - Generative Models for Classification"
     ]
   },
   {
-    "objectID": "modules/09-Module.html#readings",
-    "href": "modules/09-Module.html#readings",
-    "title": "Bagging and Random Forests",
+    "objectID": "modules/05-Generative_Models.html#readings",
+    "href": "modules/05-Generative_Models.html#readings",
+    "title": "Generative Methods for Classification",
     "section": "",
-    "text": "An Introduction to Statistical Learning chapter 8.2.",
+    "text": "An Introduction to Statistical Learning chapter 4.",
     "crumbs": [
       "Topics",
-      "9 - Bagging and Random Forests"
+      "5 - Generative Models for Classification"
     ]
   },
   {
-    "objectID": "modules/09-Module.html#assignments",
-    "href": "modules/09-Module.html#assignments",
-    "title": "Bagging and Random Forests",
+    "objectID": "modules/05-Generative_Models.html#assignments",
+    "href": "modules/05-Generative_Models.html#assignments",
+    "title": "Generative Methods for Classification",
     "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nBagging and Random Forests Lab (PDF, Rmarkdown)",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nGenerative Models for Classification Lab (PDF, Rmarkdown)",
     "crumbs": [
       "Topics",
-      "9 - Bagging and Random Forests"
+      "5 - Generative Models for Classification"
     ]
   },
   {
-    "objectID": "modules/07-Module.html",
-    "href": "modules/07-Module.html",
-    "title": "Resampling Methods",
+    "objectID": "modules/03-Multiple_Regression.html",
+    "href": "modules/03-Multiple_Regression.html",
+    "title": "Multiple Regression",
     "section": "",
-    "text": "An Introduction to Statistical Learning chapter 5.",
+    "text": "Intro to Modern Statistics chapter 8.",
     "crumbs": [
       "Topics",
-      "7 - Resampling Methods"
+      "3 - Multiple regression"
     ]
   },
   {
-    "objectID": "modules/07-Module.html#readings",
-    "href": "modules/07-Module.html#readings",
-    "title": "Resampling Methods",
+    "objectID": "modules/03-Multiple_Regression.html#readings",
+    "href": "modules/03-Multiple_Regression.html#readings",
+    "title": "Multiple Regression",
     "section": "",
-    "text": "An Introduction to Statistical Learning chapter 5.",
+    "text": "Intro to Modern Statistics chapter 8.",
     "crumbs": [
       "Topics",
-      "7 - Resampling Methods"
+      "3 - Multiple regression"
     ]
   },
   {
-    "objectID": "modules/07-Module.html#assignments",
-    "href": "modules/07-Module.html#assignments",
-    "title": "Resampling Methods",
+    "objectID": "modules/03-Multiple_Regression.html#assignments",
+    "href": "modules/03-Multiple_Regression.html#assignments",
+    "title": "Multiple Regression",
     "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nResampling Methods Lab (PDF, Rmarkdown)",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nMultiple regression Lab (PDF, Rmarkdown)",
     "crumbs": [
       "Topics",
-      "7 - Resampling Methods"
+      "3 - Multiple regression"
     ]
   },
   {
-    "objectID": "modules/05-Module.html",
-    "href": "modules/05-Module.html",
-    "title": "Logistic Regression",
-    "section": "",
-    "text": "Intro to Modern Statistics chapter 9.",
-    "crumbs": [
-      "Topics",
-      "5 - Logistic Regression"
-    ]
-  },
-  {
-    "objectID": "modules/05-Module.html#readings",
-    "href": "modules/05-Module.html#readings",
-    "title": "Logistic Regression",
-    "section": "",
-    "text": "Intro to Modern Statistics chapter 9.",
-    "crumbs": [
-      "Topics",
-      "5 - Logistic Regression"
-    ]
-  },
-  {
-    "objectID": "modules/05-Module.html#assignments",
-    "href": "modules/05-Module.html#assignments",
-    "title": "Logistic Regression",
-    "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nLogistic Regression Lab (PDF, Rmarkdown)",
-    "crumbs": [
-      "Topics",
-      "5 - Logistic Regression"
-    ]
-  },
-  {
-    "objectID": "modules/05-Module.html#supplemental-videos",
-    "href": "modules/05-Module.html#supplemental-videos",
-    "title": "Logistic Regression",
+    "objectID": "modules/03-Multiple_Regression.html#supplemental-videos",
+    "href": "modules/03-Multiple_Regression.html#supplemental-videos",
+    "title": "Multiple Regression",
     "section": "Supplemental Videos",
     "text": "Supplemental Videos",
     "crumbs": [
       "Topics",
-      "5 - Logistic Regression"
+      "3 - Multiple regression"
     ]
   },
   {
-    "objectID": "modules/03-Module.html",
-    "href": "modules/03-Module.html",
-    "title": "Linear Regression",
+    "objectID": "modules/01-Intro_to_Modeling.html",
+    "href": "modules/01-Intro_to_Modeling.html",
+    "title": "Introduction to Modeling",
     "section": "",
-    "text": "Intro to Modern Statistics chapter 7.",
+    "text": "An Introduction to Statistical Learning chapter 2.",
     "crumbs": [
       "Topics",
-      "3 - Linear regression"
+      "1 - Introduction to Modeling"
     ]
   },
   {
-    "objectID": "modules/03-Module.html#readings",
-    "href": "modules/03-Module.html#readings",
-    "title": "Linear Regression",
+    "objectID": "modules/01-Intro_to_Modeling.html#readings",
+    "href": "modules/01-Intro_to_Modeling.html#readings",
+    "title": "Introduction to Modeling",
     "section": "",
-    "text": "Intro to Modern Statistics chapter 7.",
+    "text": "An Introduction to Statistical Learning chapter 2.",
     "crumbs": [
       "Topics",
-      "3 - Linear regression"
+      "1 - Introduction to Modeling"
     ]
   },
   {
-    "objectID": "modules/03-Module.html#assignments",
-    "href": "modules/03-Module.html#assignments",
-    "title": "Linear Regression",
+    "objectID": "modules/01-Intro_to_Modeling.html#assignments",
+    "href": "modules/01-Intro_to_Modeling.html#assignments",
+    "title": "Introduction to Modeling",
     "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nLinear regression Lab (PDF, Rmarkdown)",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nIntroduction to Modeling Lab (PDF, Rmarkdown)",
     "crumbs": [
       "Topics",
-      "3 - Linear regression"
-    ]
-  },
-  {
-    "objectID": "modules/03-Module.html#supplemental-videos",
-    "href": "modules/03-Module.html#supplemental-videos",
-    "title": "Linear Regression",
-    "section": "Supplemental Videos",
-    "text": "Supplemental Videos",
-    "crumbs": [
-      "Topics",
-      "3 - Linear regression"
-    ]
-  },
-  {
-    "objectID": "modules/01-Module.html",
-    "href": "modules/01-Module.html",
-    "title": "Introduction to the Course",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 1.",
-    "crumbs": [
-      "Topics",
-      "1 - Introduction to the course"
-    ]
-  },
-  {
-    "objectID": "modules/01-Module.html#readings",
-    "href": "modules/01-Module.html#readings",
-    "title": "Introduction to the Course",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 1.",
-    "crumbs": [
-      "Topics",
-      "1 - Introduction to the course"
-    ]
-  },
-  {
-    "objectID": "modules/01-Module.html#assignments",
-    "href": "modules/01-Module.html#assignments",
-    "title": "Introduction to the Course",
-    "section": "Assignments",
-    "text": "Assignments\n\nComplete the formative assessment.\nIntroduce yourself on Slack.\nMake sure R and RStudio are up-to-date. See the software page for details.",
-    "crumbs": [
-      "Topics",
-      "1 - Introduction to the course"
-    ]
-  },
-  {
-    "objectID": "modules/01-Module.html#supplemental-videos",
-    "href": "modules/01-Module.html#supplemental-videos",
-    "title": "Introduction to the Course",
-    "section": "Supplemental Videos",
-    "text": "Supplemental Videos",
-    "crumbs": [
-      "Topics",
-      "1 - Introduction to the course"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "IS382 Predictive Modeling",
-    "section": "",
-    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to IS382!\n\n\nImportant information on how to get started with this course. Please read this post carefully.\n\n\n\n\n\nMar 13, 2025\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Announcements"
+      "1 - Introduction to Modeling"
     ]
   },
   {
@@ -369,245 +330,277 @@
     ]
   },
   {
-    "objectID": "modules/02-Module.html",
-    "href": "modules/02-Module.html",
-    "title": "Introduction to Modeling",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "IS382 Predictive Modeling",
     "section": "",
-    "text": "An Introduction to Statistical Learning chapter 2.",
+    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to IS382!\n\n\nImportant information on how to get started with this course. Please read this post carefully.\n\n\n\n\n\nMar 13, 2025\n\n\n\n\n\nNo matching items",
     "crumbs": [
-      "Topics",
-      "2 - Introduction to Modeling"
+      "Announcements"
     ]
   },
   {
-    "objectID": "modules/02-Module.html#readings",
-    "href": "modules/02-Module.html#readings",
-    "title": "Introduction to Modeling",
+    "objectID": "modules/00-Intro_to_Course.html",
+    "href": "modules/00-Intro_to_Course.html",
+    "title": "Introduction to the Course",
     "section": "",
-    "text": "An Introduction to Statistical Learning chapter 2.",
+    "text": "An Introduction to Statistical Learning chapter 1.",
     "crumbs": [
       "Topics",
-      "2 - Introduction to Modeling"
+      "Introduction to the course"
     ]
   },
   {
-    "objectID": "modules/02-Module.html#assignments",
-    "href": "modules/02-Module.html#assignments",
-    "title": "Introduction to Modeling",
+    "objectID": "modules/00-Intro_to_Course.html#readings",
+    "href": "modules/00-Intro_to_Course.html#readings",
+    "title": "Introduction to the Course",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 1.",
+    "crumbs": [
+      "Topics",
+      "Introduction to the course"
+    ]
+  },
+  {
+    "objectID": "modules/00-Intro_to_Course.html#assignments",
+    "href": "modules/00-Intro_to_Course.html#assignments",
+    "title": "Introduction to the Course",
     "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nIntroduction to Modeling Lab (PDF, Rmarkdown)",
+    "text": "Assignments\n\nComplete the formative assessment.\nIntroduce yourself on Slack.\nMake sure R and RStudio are up-to-date. See the software page for details.",
     "crumbs": [
       "Topics",
-      "2 - Introduction to Modeling"
+      "Introduction to the course"
     ]
   },
   {
-    "objectID": "modules/04-Module.html",
-    "href": "modules/04-Module.html",
-    "title": "Multiple Regression",
-    "section": "",
-    "text": "Intro to Modern Statistics chapter 8.",
-    "crumbs": [
-      "Topics",
-      "4 - Multiple regression"
-    ]
-  },
-  {
-    "objectID": "modules/04-Module.html#readings",
-    "href": "modules/04-Module.html#readings",
-    "title": "Multiple Regression",
-    "section": "",
-    "text": "Intro to Modern Statistics chapter 8.",
-    "crumbs": [
-      "Topics",
-      "4 - Multiple regression"
-    ]
-  },
-  {
-    "objectID": "modules/04-Module.html#assignments",
-    "href": "modules/04-Module.html#assignments",
-    "title": "Multiple Regression",
-    "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nMultiple regression Lab (PDF, Rmarkdown)",
-    "crumbs": [
-      "Topics",
-      "4 - Multiple regression"
-    ]
-  },
-  {
-    "objectID": "modules/04-Module.html#supplemental-videos",
-    "href": "modules/04-Module.html#supplemental-videos",
-    "title": "Multiple Regression",
+    "objectID": "modules/00-Intro_to_Course.html#supplemental-videos",
+    "href": "modules/00-Intro_to_Course.html#supplemental-videos",
+    "title": "Introduction to the Course",
     "section": "Supplemental Videos",
     "text": "Supplemental Videos",
     "crumbs": [
       "Topics",
-      "4 - Multiple regression"
+      "Introduction to the course"
     ]
   },
   {
-    "objectID": "modules/06-Module.html",
-    "href": "modules/06-Module.html",
-    "title": "Generative Methods for Classification",
+    "objectID": "modules/02-Linear_Regression.html",
+    "href": "modules/02-Linear_Regression.html",
+    "title": "Linear Regression",
     "section": "",
-    "text": "An Introduction to Statistical Learning chapter 4.",
+    "text": "Intro to Modern Statistics chapter 7.",
     "crumbs": [
       "Topics",
-      "6 - Generative Models for Classification"
+      "2 - Linear regression"
     ]
   },
   {
-    "objectID": "modules/06-Module.html#readings",
-    "href": "modules/06-Module.html#readings",
-    "title": "Generative Methods for Classification",
+    "objectID": "modules/02-Linear_Regression.html#readings",
+    "href": "modules/02-Linear_Regression.html#readings",
+    "title": "Linear Regression",
     "section": "",
-    "text": "An Introduction to Statistical Learning chapter 4.",
+    "text": "Intro to Modern Statistics chapter 7.",
     "crumbs": [
       "Topics",
-      "6 - Generative Models for Classification"
+      "2 - Linear regression"
     ]
   },
   {
-    "objectID": "modules/06-Module.html#assignments",
-    "href": "modules/06-Module.html#assignments",
-    "title": "Generative Methods for Classification",
+    "objectID": "modules/02-Linear_Regression.html#assignments",
+    "href": "modules/02-Linear_Regression.html#assignments",
+    "title": "Linear Regression",
     "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nGenerative Models for Classification Lab (PDF, Rmarkdown)",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nLinear regression Lab (PDF, Rmarkdown)",
     "crumbs": [
       "Topics",
-      "6 - Generative Models for Classification"
+      "2 - Linear regression"
     ]
   },
   {
-    "objectID": "modules/08-Module.html",
-    "href": "modules/08-Module.html",
-    "title": "Tree Based Methods",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 8.1.",
-    "crumbs": [
-      "Topics",
-      "8 - Tree Based Methods"
-    ]
-  },
-  {
-    "objectID": "modules/08-Module.html#readings",
-    "href": "modules/08-Module.html#readings",
-    "title": "Tree Based Methods",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 8.1.",
-    "crumbs": [
-      "Topics",
-      "8 - Tree Based Methods"
-    ]
-  },
-  {
-    "objectID": "modules/08-Module.html#assignments",
-    "href": "modules/08-Module.html#assignments",
-    "title": "Tree Based Methods",
-    "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nTree Based Methods Lab (PDF, Rmarkdown)",
-    "crumbs": [
-      "Topics",
-      "8 - Tree Based Methods"
-    ]
-  },
-  {
-    "objectID": "modules/10-Module.html",
-    "href": "modules/10-Module.html",
-    "title": "Support Vector Machines",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 9.",
-    "crumbs": [
-      "Topics",
-      "10 - Support Vector Machines"
-    ]
-  },
-  {
-    "objectID": "modules/10-Module.html#readings",
-    "href": "modules/10-Module.html#readings",
-    "title": "Support Vector Machines",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 9.",
-    "crumbs": [
-      "Topics",
-      "10 - Support Vector Machines"
-    ]
-  },
-  {
-    "objectID": "modules/10-Module.html#assignments",
-    "href": "modules/10-Module.html#assignments",
-    "title": "Support Vector Machines",
-    "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nSupport Vector Machines Lab (PDF, Rmarkdown)",
-    "crumbs": [
-      "Topics",
-      "10 - Support Vector Machines"
-    ]
-  },
-  {
-    "objectID": "modules/12-Module.html",
-    "href": "modules/12-Module.html",
-    "title": "Cluster Methods",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 12.3 and 12.4.",
-    "crumbs": [
-      "Topics",
-      "12 - Clustering Methods"
-    ]
-  },
-  {
-    "objectID": "modules/12-Module.html#readings",
-    "href": "modules/12-Module.html#readings",
-    "title": "Cluster Methods",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 12.3 and 12.4.",
-    "crumbs": [
-      "Topics",
-      "12 - Clustering Methods"
-    ]
-  },
-  {
-    "objectID": "modules/12-Module.html#assignments",
-    "href": "modules/12-Module.html#assignments",
-    "title": "Cluster Methods",
-    "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nClustering Methods Lab (PDF, Rmarkdown)",
-    "crumbs": [
-      "Topics",
-      "12 - Clustering Methods"
-    ]
-  },
-  {
-    "objectID": "modules/14-Module.html",
-    "href": "modules/14-Module.html",
-    "title": "Bayesian Analysis",
-    "section": "",
-    "text": "Chapter 17 of Learning Statistics with R (Navarro, version 0.6)\nFitting a Model by Maximum Likelihood (Collier, 2013).\nKruschke’s website for Doing Bayesian Data Analysis\nKruschke’s blog\nAndrew Gelman’s blog - Posts about bayesian statistics",
-    "crumbs": [
-      "Topics",
-      "14 - Bayesian Analysis"
-    ]
-  },
-  {
-    "objectID": "modules/14-Module.html#readings",
-    "href": "modules/14-Module.html#readings",
-    "title": "Bayesian Analysis",
-    "section": "",
-    "text": "Chapter 17 of Learning Statistics with R (Navarro, version 0.6)\nFitting a Model by Maximum Likelihood (Collier, 2013).\nKruschke’s website for Doing Bayesian Data Analysis\nKruschke’s blog\nAndrew Gelman’s blog - Posts about bayesian statistics",
-    "crumbs": [
-      "Topics",
-      "14 - Bayesian Analysis"
-    ]
-  },
-  {
-    "objectID": "modules/14-Module.html#supplemental-videos",
-    "href": "modules/14-Module.html#supplemental-videos",
-    "title": "Bayesian Analysis",
+    "objectID": "modules/02-Linear_Regression.html#supplemental-videos",
+    "href": "modules/02-Linear_Regression.html#supplemental-videos",
+    "title": "Linear Regression",
     "section": "Supplemental Videos",
-    "text": "Supplemental Videos\n\nRasmus Bååth’s Introduction to Bayesian Data Analysis Video Series\n\n\n\n\n\n\n\n\nJohn Kruschke’s Video Series\nBayesian Methods Interpret Data Better\n\n\nBayesian Estimation Supersedes the t Test\n\n\nPrecision is the goal",
+    "text": "Supplemental Videos",
     "crumbs": [
       "Topics",
-      "14 - Bayesian Analysis"
+      "2 - Linear regression"
+    ]
+  },
+  {
+    "objectID": "modules/04-Logistic_Regression.html",
+    "href": "modules/04-Logistic_Regression.html",
+    "title": "Logistic Regression",
+    "section": "",
+    "text": "Intro to Modern Statistics chapter 9.",
+    "crumbs": [
+      "Topics",
+      "4 - Logistic Regression"
+    ]
+  },
+  {
+    "objectID": "modules/04-Logistic_Regression.html#readings",
+    "href": "modules/04-Logistic_Regression.html#readings",
+    "title": "Logistic Regression",
+    "section": "",
+    "text": "Intro to Modern Statistics chapter 9.",
+    "crumbs": [
+      "Topics",
+      "4 - Logistic Regression"
+    ]
+  },
+  {
+    "objectID": "modules/04-Logistic_Regression.html#assignments",
+    "href": "modules/04-Logistic_Regression.html#assignments",
+    "title": "Logistic Regression",
+    "section": "Assignments",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nLogistic Regression Lab (PDF, Rmarkdown)",
+    "crumbs": [
+      "Topics",
+      "4 - Logistic Regression"
+    ]
+  },
+  {
+    "objectID": "modules/04-Logistic_Regression.html#supplemental-videos",
+    "href": "modules/04-Logistic_Regression.html#supplemental-videos",
+    "title": "Logistic Regression",
+    "section": "Supplemental Videos",
+    "text": "Supplemental Videos",
+    "crumbs": [
+      "Topics",
+      "4 - Logistic Regression"
+    ]
+  },
+  {
+    "objectID": "modules/06-Resampling_Methods.html",
+    "href": "modules/06-Resampling_Methods.html",
+    "title": "Resampling Methods",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 5.",
+    "crumbs": [
+      "Topics",
+      "6 - Resampling Methods"
+    ]
+  },
+  {
+    "objectID": "modules/06-Resampling_Methods.html#readings",
+    "href": "modules/06-Resampling_Methods.html#readings",
+    "title": "Resampling Methods",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 5.",
+    "crumbs": [
+      "Topics",
+      "6 - Resampling Methods"
+    ]
+  },
+  {
+    "objectID": "modules/06-Resampling_Methods.html#assignments",
+    "href": "modules/06-Resampling_Methods.html#assignments",
+    "title": "Resampling Methods",
+    "section": "Assignments",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nResampling Methods Lab (PDF, Rmarkdown)",
+    "crumbs": [
+      "Topics",
+      "6 - Resampling Methods"
+    ]
+  },
+  {
+    "objectID": "modules/08-Bagging_and_Random_Forests.html",
+    "href": "modules/08-Bagging_and_Random_Forests.html",
+    "title": "Bagging and Random Forests",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 8.2.",
+    "crumbs": [
+      "Topics",
+      "8 - Bagging and Random Forests"
+    ]
+  },
+  {
+    "objectID": "modules/08-Bagging_and_Random_Forests.html#readings",
+    "href": "modules/08-Bagging_and_Random_Forests.html#readings",
+    "title": "Bagging and Random Forests",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 8.2.",
+    "crumbs": [
+      "Topics",
+      "8 - Bagging and Random Forests"
+    ]
+  },
+  {
+    "objectID": "modules/08-Bagging_and_Random_Forests.html#assignments",
+    "href": "modules/08-Bagging_and_Random_Forests.html#assignments",
+    "title": "Bagging and Random Forests",
+    "section": "Assignments",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nBagging and Random Forests Lab (PDF, Rmarkdown)",
+    "crumbs": [
+      "Topics",
+      "8 - Bagging and Random Forests"
+    ]
+  },
+  {
+    "objectID": "modules/10-Principal_Component_Analysis.html",
+    "href": "modules/10-Principal_Component_Analysis.html",
+    "title": "Principal Component Analysis",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 12.1 and 12.2.",
+    "crumbs": [
+      "Topics",
+      "10 - Principal Component Analysis"
+    ]
+  },
+  {
+    "objectID": "modules/10-Principal_Component_Analysis.html#readings",
+    "href": "modules/10-Principal_Component_Analysis.html#readings",
+    "title": "Principal Component Analysis",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 12.1 and 12.2.",
+    "crumbs": [
+      "Topics",
+      "10 - Principal Component Analysis"
+    ]
+  },
+  {
+    "objectID": "modules/10-Principal_Component_Analysis.html#assignments",
+    "href": "modules/10-Principal_Component_Analysis.html#assignments",
+    "title": "Principal Component Analysis",
+    "section": "Assignments",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nPrincipal Component Analysis Lab (PDF, Rmarkdown)",
+    "crumbs": [
+      "Topics",
+      "10 - Principal Component Analysis"
+    ]
+  },
+  {
+    "objectID": "modules/12-Missing_Data.html",
+    "href": "modules/12-Missing_Data.html",
+    "title": "Missing Data",
+    "section": "",
+    "text": "Van Buuren & Groothuis-Oudshoorn (2011). mice: Multivariate imputation by chained equations. Journal of Statistical Software. https://www.jstatsoft.org/article/view/v045i03.",
+    "crumbs": [
+      "Topics",
+      "12 - Missing data"
+    ]
+  },
+  {
+    "objectID": "modules/12-Missing_Data.html#readings",
+    "href": "modules/12-Missing_Data.html#readings",
+    "title": "Missing Data",
+    "section": "",
+    "text": "Van Buuren & Groothuis-Oudshoorn (2011). mice: Multivariate imputation by chained equations. Journal of Statistical Software. https://www.jstatsoft.org/article/view/v045i03.",
+    "crumbs": [
+      "Topics",
+      "12 - Missing data"
+    ]
+  },
+  {
+    "objectID": "modules/12-Missing_Data.html#assignments",
+    "href": "modules/12-Missing_Data.html#assignments",
+    "title": "Missing Data",
+    "section": "Assignments",
+    "text": "Assignments\nThis week you should be preparing your project presentation.",
+    "crumbs": [
+      "Topics",
+      "12 - Missing data"
     ]
   },
   {
