@@ -284,7 +284,7 @@ ggplot(legosets, aes(y = US_retailPrice, x = pieces, color = minifigs)) +
 The Diagnostic Assessment and Achievement of College Skills (DAACS) is a suite of assessments designed to assess college readiness including:
 
 * A Self-Regulated Learning Assessment with approximately 60 items
-	* Using exploratory factor analysis, we combine the items to create four subdomains (i.e. motivaiton, metacognition, strategies, self-efficacy)
+	* Using exploratory factor analysis, we combine the items to create four subdomains (i.e. motivation, metacognition, strategies, self-efficacy)
 * Math and reading assessment (students complete 18 to 24 items and receive a total score ranging from 0 to 1)
 * Writing assessment (this is machine scored using large language models and predictive models)
 * Feedback views (this is a measure of how many pages students view)
@@ -318,6 +318,6 @@ class: inverse, right, middle, hide-logo
 [`r icons::fontawesome("slack")` `r gsub('https://', '', slack_link)`](`r slack_link`)  
 [`r icons::fontawesome("github")` @jbryer](https://github.com/jbryer)  
 [`r icons::fontawesome('mastodon')` @jbryer@vis.social](https://vis.social/@jbryer)  
-[`r icons::fontawesome("link")` `r paste0(tolower(semester), year, '.data606.net')`](https://`r paste0(tolower(semester), year, '.data606.net')`)   
+[`r icons::fontawesome("link")` `r paste0(tolower(semester), year, '.is382.net')`](https://`r paste0(tolower(semester), year, '.is382.net')`)   
 
 

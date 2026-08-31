@@ -1,0 +1,16 @@
+---
+title: "Introduction to Predictive Modeling"
+date: 2026-08-31
+draft: false
+description: "Slides and recording for the *Introduction to Predictive Modeling* meetup."
+categories: ["Meetups"]
+image: "01-Introduction_to_Predictive_Modeling.png"
+---
+
+
+[Click here](/slides/00-Intro_to_Course.html#1) to open the slides([PDF](/slides/00-Intro_to_Course.pdf)).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1JN7nhyWibw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+

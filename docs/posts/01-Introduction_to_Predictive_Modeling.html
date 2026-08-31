@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-08-31">
+<meta name="description" content="Slides and recording for the Introduction to Predictive Modeling meetup.">
 
-<title>IS382 Predictive Modeling</title>
+<title>Introduction to Predictive Modeling – IS382 Predictive Modeling</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,29 +28,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./schedule.html" rel="next">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9ccd1f3250f77f6ff3eb633de0e056e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-12b268dac006170a550a31a03a39bb4a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-9ccd1f3250f77f6ff3eb633de0e056e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9ccd1f3250f77f6ff3eb633de0e056e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-12b268dac006170a550a31a03a39bb4a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-9ccd1f3250f77f6ff3eb633de0e056e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -76,68 +75,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-description','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<meta property="og:title" content="IS382 Predictive Modeling">
-<meta property="og:description" content="CUNY School of Professional Studies">
+<meta property="og:title" content="Introduction to Predictive Modeling – IS382 Predictive Modeling">
+<meta property="og:description" content="Slides and recording for the Introduction to Predictive Modeling meetup.">
 <meta property="og:image" content="https://fall2026.is382.net/posts/01-Introduction_to_Predictive_Modeling.png">
 <meta property="og:site_name" content="IS382 Predictive Modeling">
 <meta property="og:image:height" content="720">
@@ -315,7 +256,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Announcements</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Introduction to Predictive Modeling</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -329,13 +270,13 @@ window.Quarto = {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./course_logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="./course_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../course_logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../course_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
-    <a href="./schedule.html" title="Schedule" class="quarto-navigation-tool px-1" aria-label="Schedule"><i class="bi bi-calendar-check"></i></a>
-    <a href="./textbooks.html" title="Textbooks" class="quarto-navigation-tool px-1" aria-label="Textbooks"><i class="bi bi-book"></i></a>
+    <a href="../schedule.html" title="Schedule" class="quarto-navigation-tool px-1" aria-label="Schedule"><i class="bi bi-calendar-check"></i></a>
+    <a href="../textbooks.html" title="Textbooks" class="quarto-navigation-tool px-1" aria-label="Textbooks"><i class="bi bi-book"></i></a>
     <a href="https://github.com/jbryer/IS382-2026-Fall" title="Github" class="quarto-navigation-tool px-1" aria-label="Github" target="_blank"><i class="bi bi-github"></i></a>
     <div class="dropdown">
       <a href="" title="CUNY" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="CUNY"><i class="bi bi-link-45deg"></i></a>
@@ -370,13 +311,13 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Announcements</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./schedule.html" class="sidebar-item-text sidebar-link">
+  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
@@ -391,31 +332,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./instructor.html" class="sidebar-item-text sidebar-link">
+  <a href="../instructor.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Instructor</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project.html" class="sidebar-item-text sidebar-link">
+  <a href="../project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Project</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software.html" class="sidebar-item-text sidebar-link">
+  <a href="../software.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./textbooks.html" class="sidebar-item-text sidebar-link">
+  <a href="../textbooks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Textbooks</span></a>
   </div>
 </li>
@@ -432,85 +373,85 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/00-Intro_to_Course.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/00-Intro_to_Course.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction to the course</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/01-Intro_to_Modeling.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/01-Intro_to_Modeling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">1 - Introduction to Modeling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/02-Linear_Regression.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/02-Linear_Regression.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2 - Linear regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/03-Multiple_Regression.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/03-Multiple_Regression.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3 - Multiple regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/04-Logistic_Regression.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/04-Logistic_Regression.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">4 - Logistic Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/05-Generative_Models.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/05-Generative_Models.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">5 - Generative Models for Classification</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/06-Resampling_Methods.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/06-Resampling_Methods.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">6 - Resampling Methods</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/07-Tree_Models.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/07-Tree_Models.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">7 - Tree Based Methods</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/08-Bagging_and_Random_Forests.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/08-Bagging_and_Random_Forests.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">8 - Bagging and Random Forests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/09-Support_Vector_Machines.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/09-Support_Vector_Machines.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9 - Support Vector Machines</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/10-Principal_Component_Analysis.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/10-Principal_Component_Analysis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">10 - Principal Component Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/11-Cluster_Methods.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/11-Cluster_Methods.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">11 - Clustering Methods</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/12-Missing_Data.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/12-Missing_Data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">12 - Missing data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modules/13-Bayesian_Analysis.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/13-Bayesian_Analysis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">13 - Bayesian Analysis</span></a>
   </div>
 </li>
@@ -528,14 +469,28 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">IS382 Predictive Modeling</h1>
-</div>
+<h1 class="title">Introduction to Predictive Modeling</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Meetups</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Slides and recording for the <em>Introduction to Predictive Modeling</em> meetup.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 31, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -545,60 +500,13 @@ window.Quarto = {
 </header>
 
 
-<p>Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.</p>
+<p><a href="../slides/00-Intro_to_Course.html#1">Click here</a> to open the slides(<a href="../slides/00-Intro_to_Course.pdf">PDF</a>).</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1JN7nhyWibw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TWVldHVwcw==" data-listing-date-sort="1788148800000" data-listing-file-modified-sort="1788219050000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="20">
-<div class="thumbnail"><a href="./posts/01-Introduction_to_Predictive_Modeling.html" class="no-external">
-
-<img loading="lazy" src="./posts/01-Introduction_to_Predictive_Modeling.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/01-Introduction_to_Predictive_Modeling.html" class="no-external">Introduction to Predictive Modeling</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/01-Introduction_to_Predictive_Modeling.html" class="no-external">
-<p>Slides and recording for the <em>Introduction to Predictive Modeling</em> meetup.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/01-Introduction_to_Predictive_Modeling.html" class="no-external">
-<div class="listing-date">
-Aug 31, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1741838400000" data-listing-file-modified-sort="1787526732000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="119">
-<div class="thumbnail"><a href="./posts/00-Welcome.html" class="no-external">
-
-<img loading="lazy" src="./posts/00-welcome.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/00-Welcome.html" class="no-external">Welcome to IS382!</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/00-Welcome.html" class="no-external">
-<p>Important information on how to get started with this course. Please read this post carefully.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/00-Welcome.html" class="no-external">
-<div class="listing-date">
-Mar 13, 2025
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1012,18 +920,9 @@ Mar 13, 2025
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./schedule.html" class="pagination-link" aria-label="Schedule">
-        <span class="nav-page-text">Schedule</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://jbryer.github.io/IS382-2026-Fall/edit/master/website/index.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://jbryer.github.io/IS382-2026-Fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://jbryer.github.io/IS382-2026-Fall/edit/master/website/posts/01-Introduction_to_Predictive_Modeling.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://jbryer.github.io/IS382-2026-Fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

@@ -17,8 +17,8 @@ project:
     - "cp -rf slides/ docs/slides/"
 
 website:
-  announcement:
-    content: "Our first meetup will be Monday, August 31st at 7:00pm. [Click here to join.](https://us02web.zoom.us/j/84988569164?pwd=FWEeLQ4WRFU3uyJ6pNNh7dCyrlTFsZ.1)"
+  #announcement:
+  #  content: "Our first meetup will be Monday, August 31st at 7:00pm. [Click here to join.](https://us02web.zoom.us/j/84988569164?pwd=FWEeLQ4WRFU3uyJ6pNNh7dCyrlTFsZ.1)"
   #   content: "[Click here]() to the join the Slack channel."
   #   # position: below-navbar # above-navbar or below-navbar
   #   icon: slack #info-circle # https://icons.getbootstrap.com
