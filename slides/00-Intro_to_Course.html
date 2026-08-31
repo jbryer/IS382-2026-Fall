@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Introduction to IS 381</title>
+    <title>Introduction to IS 382</title>
     <meta charset="utf-8" />
     <meta name="author" content="Jason Bryer, Ph.D." />
     <script src="libs/header-attrs/header-attrs.js"></script>
@@ -19,16 +19,15 @@
 
 class: center, middle, inverse, title-slide
 
-# Introduction to IS 381
-## Statistics and Probability with R
+# Introduction to IS 382
+## Predictive Modeling
 ### Jason Bryer, Ph.D.
-### Fall 2025
+### Fall 2026
 
 
 ---
 # Agenda
 
-* About your instructor
 * Syllabus
 * Class meetups
 * Course Schedule
@@ -37,72 +36,29 @@ class: center, middle, inverse, title-slide
 	* Labs
 	* Data Project
 	* Exams
-* Software
-	* The `DATA606` R Package
-	* Using R Markdown
-
----
-
-# A little about me...
-
-* Assistant Professor at CUNY in Data Science and Information Systems
-
-* Principal Investigator for a Department of Education Grant to develop and test the Diagnostic Assessment and Achievement of College Skills ([www.DAACS.net](http://www.daacs.net))  
-
-* Authored over a dozen R packages including:
-	* [likert](http://github.com/jbryer/likert)
-	* [ShinyQDA](http://github.com/jbryer/ShinyQDA)
-	* [DTedit](http://github.com/jbryer/DTedit)
-	* [login](http://github.com/jbryer/login)
-
-* Specialize in propensity score methods. Three new methods/R packages developed include:
-	* [multilevelPSA](http://github.com/jbryer/multilevelPSA)
-	* [TriMatch](http://github.com/jbryer/TriMatch)
-	* [PSAboot](http://github.com/jbryer/PSAboot)
-
----
-
-# Also a Father...
-
-&lt;img src="images/BoysFall2019.jpg" width="65%" style="display: block; margin: auto;" /&gt;
-
----
-
-# Runner...
-
-&lt;table border='0' width='100%'&gt;&lt;tr&gt;&lt;td&gt;
-&lt;center&gt;&lt;img src='images/2025DisneyMarathon.jpeg' height='450'&gt;&lt;/center&gt;
-&lt;/td&gt;&lt;td&gt;
-&lt;center&gt;&lt;img src='images/2019NYCMarathon.jpg' height='450'&gt;&lt;/center&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
----
-
-# And photographer.
-
-&lt;img src="images/Sleeping_Empire.jpg" width="80%" style="display: block; margin: auto;" /&gt;
+* Introduction to predictive modeling
 
 ---
 
 # Syllabus &lt;img src="images/hex/rmarkdown.png" class="title-hex"&gt;&lt;img src="images/hex/blogdown.png" class="title-hex"&gt;
 
-Syllabus and course materials are here: [https://fall2025.data606.net](https://fall2025.data606.net)
+Syllabus and course materials are here: [https://fall2026.is382.net](https://fall2026.is382.net)
 
-The site is built using [Quarto](https://quarto.org) and hosted on [Github](https://github.com/jbryer/IS381). Each page of the site has a "Edit this page" link at the bottom right, use that to start a pull request on Github.
+The site is built using [Quarto](https://quarto.org) and hosted on [Github](https://github.com/jbryer/IS382-2026-Fall). Each page of the site has a "Edit this page" link at the bottom right, use that to start a pull request on Github.
 
 We will use Brightspace primary for submitting assignments only. Please submit a PDF.
 
 PDFs are preferred for the homework as there is some LaTeX formatting in the R markdown files. The `tineytex` R package helps with install LaTeX, but you can also install LaTeX using [MiKTeX](http://miktex.org) (for Windows) and [BasicTeX](http://www.tug.org/mactex/morepackages.html) (for Mac) See this page for more information: 
-https://fall2025.data606.net/course-overview/software/
+https://fall2026.is382.net/course-overview/software/
 
 ---
 class: font90
 
 # Meetups
 
-We will have meetups on Wednesday evenings at 8:00pm. 
+We will have meetups on Monday evenings from 7:00pm to 8:00pm. 
 
-Meetups will be recorded and made available the next day on the [course website](https://spring2024.data606.net/course-overview/meetups/).
+Meetups will be recorded and made available the next day on the [course website](https://fall2026.is382.net).
 
 Though attending live is not strictly required, **I expect everyone to watch the lectures during the week.** I use the class meetups to convey important information and announcements. Very often I will cover some topics not in the textbook. Students who attend the meetups tend to do well on the assignments.
 
@@ -115,7 +71,7 @@ Though attending live is not strictly required, **I expect everyone to watch the
 ]
 
 ---
-
+class: font70
 # Schedule
 
 &lt;table&gt;
@@ -128,59 +84,63 @@ Though attending live is not strictly required, **I expect everyone to watch the
 &lt;tbody&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;max-width: 20px; "&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Introduction to R and RStudio &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Introduction to the Modeling &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;max-width: 20px; "&gt; 2 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; R coding basics &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Linear regression &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;max-width: 20px; "&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Data (importing and structure) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Multiple regression &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;max-width: 20px; "&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Data visualization with ggplot2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Maximum Likelihood Estimation and Logistic Regression &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;max-width: 20px; "&gt; 5 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Reshaping Data &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Generative Models for Classification &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;max-width: 20px; "&gt; 6 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Probability &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Resampling Methods &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;max-width: 20px; "&gt; 7 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Distributions &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Tree Based Methods &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;max-width: 20px; "&gt; 8 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Foundation for inference &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Bagging and Random Forests &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;max-width: 20px; "&gt; 9 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Central limit theorem &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Support Vector Machines &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;max-width: 20px; "&gt; 10 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Inference for proportions &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Principal Component Analysis &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;max-width: 20px; "&gt; 11 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Inference for two-way tables &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Clustering Methods &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;max-width: 20px; "&gt; 12 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Inference for numerical data &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Project Proposal &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;max-width: 20px; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; No Meetup - Thanksgiving &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;max-width: 20px; "&gt; 13 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Analysis of variance &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Missing data &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;max-width: 20px; "&gt; 14 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Correlation &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Bayesian Analysis &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;max-width: 20px; "&gt; 15 &lt;/td&gt;
@@ -199,9 +159,6 @@ Diez, D.M., Barr, C.D., &amp; Çetinkaya-Rundel, M. (2019). *OpenIntro Statistic
 
 .font70[
 
-This will be our primary textbook for most of the semesters. Our goal is to cover all the chapters.
-
-
 ]
 
 .center[
@@ -214,17 +171,15 @@ This will be our primary textbook for most of the semesters. Our goal is to cove
 
 .pull-right[
 
-Navarro, D. (2018, version 0.6). *Learning Statistics with R*
+James, G., Witten, D., Hastie, T., &amp; Tibshirani, R. (2021). *An Introduction to Statistical Learning with Applications in R (2nd Ed)*.
 
 .font70[
-
-This textbooks has a chapter on Bayesian analysis that we will use at the end of the semester. 
 
 ]
 
 .center[
 
-&lt;a href = "https://github.com/jbryer/DATA606spring2024/blob/master/Resources/Textbooks/lsr-0.6.pdf"&gt;&lt;img src = 'images/lsr.png' alt = 'Learning Statistics with R' height = '375px' /&gt;&lt;/a&gt;
+&lt;a href = "https://fall2026.is382.net/resources/ISLR2.pdf"&gt;&lt;img src = 'images/ISL2.jpg' alt = 'An Introduction to Statistical Learning with Applications in R' height = '375px' /&gt;&lt;/a&gt;
 
 ]
 
@@ -234,13 +189,21 @@ This textbooks has a chapter on Bayesian analysis that we will use at the end of
 
 # Assignments
 
+* **Weekly labs** (50%). They are available on the course schedule page: [fall2026.is382.net/schedule.html](https://fall2026.is382.net/schedule.html)
+
+* **[Data Project](https://fall2026.is382.net/project.html)** (25%). We will cover this more as the semester progresses, but is similar to what you did for IS381.
+
+* **Final Exam** (15%). This will be completed on Brightspace during the last week of the semester.
+
+* **Participation** (10%). Attending/watching the weekly meetups and completing the one minute papers.
+
 
 ---
 
 # Communication
 
-* Slack Channel: 
-	* [Click here to join the group]()
+* Slack Channel: https://cuny-msds.slack.com
+	* [Click here to join the group](https://cuny-msds.slack.com/archives/C0BLVF2MJ7Q)
 
 * Email: [jason.bryer@cuny.edu](mailto:jason.bryer@cuny.edu)
 
@@ -254,7 +217,7 @@ This textbooks has a chapter on Bayesian analysis that we will use at the end of
 
 This is an applied statistics course so we will make extensive use of the [R statistical programming language](https://www.r-project.org).
 
-Install [R](https://cran.r-project.org) and [RStudio](https://rstudio.com) on your own computer. I encourage everyone to do this at some point by the end of the semester. I have instructions on the course website here: https://fall2025.data606.net/course-overview/software/
+Install [R](https://cran.r-project.org) and [RStudio](https://rstudio.com) on your own computer. I encourage everyone to do this at some point by the end of the semester. I have instructions on the course website here: https://fall2026.is382.net/course-overview/software/
 
 You will also need to have [LaTeX](https://www.latex-project.org) installed as well in order to create PDFs. The [`tinytex`](https://yihui.org/tinytex/) R package helps with this process:
 
@@ -263,46 +226,147 @@ install.packages('tinytex')
 tinytex::install_tinytex()
 ```
 
+---
+class: inverse, middle, center
+# Introduction to Predictive Modeling
+
+---
+class: font90, middle
+# Learning...
+
+.pull-left[
+&lt;br/&gt;&lt;br/&gt;
+
+&gt; Where is the Life we have lost in living?  
+&gt; Where is the wisdom we have lost in knowledge?  
+&gt; Where is the knowledge we have lost in information?
+
+*Excerpt from [The Rock](https://leavesandpages.com/2013/01/03/poetry-excerpts-from-the-rock-by-t-s-eliot/) by T.S. Eliot*
+]
+.pull-right[
+&lt;img src="images/data_information_wisdom_chain.jpg" alt="" style="display: block; margin: auto;" /&gt;
+]
+---
+# Data Science Landscape
+
+&lt;img src="images/data_science_landscape.jpeg" alt="" width="35%" style="display: block; margin: auto;" /&gt;
+
+
+---
+# Types of machine learning algorithms
+
+&lt;img src="images/algorithm_cheat_sheet.jpeg" alt="" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+# Supervised vs. Unsupervised Learning
+
+.pull-left[
+**Supervised Learning**
+
+* Starting point: 
+	* Outcome measurement Y (also called dependent variable, response, target).
+	* Vector of p predictor measurements X (also called inputs, regressors, covariates, features, independent variables).
+	* We have training data we can use to estimate the model.
+* Objectives: 
+	* Accurately predict unseen test cases.
+	* Understand which inputs aﬀect the outcome, and how.
+	* Assess the quality of our predictions and inferences.
+
+]
+.pull-right[
+**Unsupervised Learning**
+
+* No outcome variable, just a set of predictors (features) measured on a set of samples.
+* Objective is more fuzzy — find groups of samples that behave similarly, find features that behave similarly, find linear combinations of features with the most variation.
+* Diﬃcult to know how well your are doing.
+* diﬀerent from supervised learning, but can be useful as a pre-processing step for supervised learning.
+]
+
+---
+# Statistical Learning vs. Machine Learning
+
+* Machine learning arose as a subfield of Artificial Intelligence.
+
+* Statistical learning arose as a subfield of Statistics.
+
+* There is much overlap — both fields focus on supervised and unsupervised problems:
+
+* Machine learning has a greater emphasis on large scale applications and prediction accuracy.
+
+* Statistical learning emphasizes models and their interpretability, and precision and uncertainty.
+
+* But the distinction has become more and more blurred, and there is a great deal of “cross-fertilization”.
+
+* Machine learning has the upper hand in Marketing!
+
+---
+# Example of a machine learning problem
+
+
+``` r
+data(legosets, package = 'brickset')
+legosets &lt;- legosets |&gt; dplyr::filter(year &gt; 2010)
+ggplot(legosets, aes(y = US_retailPrice, x = pieces, color = minifigs)) +
+	geom_point() + geom_smooth(se = FALSE)
+```
+
+&lt;img src="00-Intro_to_Course_files/figure-html/unnamed-chunk-4-1.png" alt="" style="display: block; margin: auto;" /&gt;
+
+---
+# An example from my own work &lt;img src="images/hex/DAACS.png" class="title-hex"&gt;
+
+The Diagnostic Assessment and Achievement of College Skills (DAACS) is a suite of assessments designed to assess college readiness including:
+
+* A Self-Regulated Learning Assessment with approximately 60 items
+	* Using exploratory factor analysis, we combine the items to create four subdomains (i.e. motivaiton, metacognition, strategies, self-efficacy)
+* Math and reading assessment (students complete 18 to 24 items and receive a total score ranging from 0 to 1)
+* Writing assessment (this is machine scored using large language models and predictive models)
+* Feedback views (this is a measure of how many pages students view)
+
+We also have basic demographic data.
+
+Our outcome measure of interest is academic success (e.g. GPA, retention, graduation).
+
+.font80[
+See Bryer, J.M., Akhmedjanova, D., Andrade, H.L., &amp; Lui, A.M. (2021). [The use of predictive modeling for assessing college readiness](https://www.emerald.com/books/edited-volume/18592/chapter-abstract/102195056/The-Use-of-Predictive-Modeling-for-Assessing?redirectedFrom=PDF). In H. Jiao &amp; R.W. Lissitz (Eds.) *Enhancing Effective Instruction and Learning Using Assessment Data,* Emerald Insight. https://doi.org/10.1108/978-1-64802-628-7
+]
 
 ---
 # Next steps... &lt;img src="images/hex/DAACS.png" class="title-hex"&gt;
 
-Before XXX (XXX):
+As soon as possible:
 
-* Complete this Google form: 
-* Go to https://cuny.daacs.net and complete the self-regulated learning assessment
-* [Join the Slack channel]()
+* [Join the Slack channel](https://cuny-msds.slack.com/archives/C0BLVF2MJ7Q)
 
 Then:
 
-* Start Lab 1 (due XXX)
+* Start the *Introduction to the Modeling* lab (due September 6th)
 
 ---
 class: inverse, right, middle, hide-logo
 
-&lt;!--img src="images/hex/DATA606.png" width="150px"/--&gt;
 
 # Good luck with the semester!
 
 [&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M440 6.5L24 246.4c-34.4 19.9-31.1 70.8 5.7 85.9L144 379.6V464c0 46.4 59.2 65.5 86.6 28.6l43.8-59.1 111.9 46.2c5.9 2.4 12.1 3.6 18.3 3.6 8.2 0 16.3-2.1 23.6-6.2 12.8-7.2 21.6-20 23.9-34.5l59.4-387.2c6.1-40.1-36.9-68.8-71.5-48.9zM192 464v-64.6l36.6 15.1L192 464zm212.6-28.7l-153.8-63.5L391 169.5c10.7-15.5-9.5-33.5-23.7-21.2L155.8 332.6 48 288 464 48l-59.4 387.3z"&gt;&lt;/path&gt;&lt;/svg&gt; jason.bryer@cuny.edu](mailto:jason.bryer@cuny.edu)  
-[&lt;svg viewBox="0 0 448 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"&gt;&lt;/path&gt;&lt;/svg&gt; ]()  
+[&lt;svg viewBox="0 0 448 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"&gt;&lt;/path&gt;&lt;/svg&gt; cuny-msds.slack.com](https://cuny-msds.slack.com)  
 [&lt;svg viewBox="0 0 496 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"&gt;&lt;/path&gt;&lt;/svg&gt; @jbryer](https://github.com/jbryer)  
 [&lt;svg viewBox="0 0 448 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"&gt;&lt;/path&gt;&lt;/svg&gt; @jbryer@vis.social](https://vis.social/@jbryer)  
-[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"&gt;&lt;/path&gt;&lt;/svg&gt; fall2025.data606.net](https://fall2025.data606.net)   
+[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"&gt;&lt;/path&gt;&lt;/svg&gt; fall2026.data606.net](https://fall2026.data606.net)   
 
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"highlightStyle": "solarized-light",
-"highlightLanguage": "R",
-"highlightLines": true,
-"countIncrementalSlides": false,
-"ratio": "16:9",
-"navigation": {
-"scroll": false
-}
+  "highlightStyle": "solarized-light",
+  "highlightLanguage": "R",
+  "highlightLines": true,
+  "countIncrementalSlides": false,
+  "ratio": "16:9",
+  "navigation": {
+    "scroll": false
+  }
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));

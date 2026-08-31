@@ -1,8 +1,8 @@
 ---
-title: "Introduction to IS 381"
-subtitle: "Statistics and Probability with R"
+title: "Introduction to IS 382"
+subtitle: "Predictive Modeling"
 author: Jason Bryer, Ph.D.
-date: "Fall 2025"
+date: "Fall 2026"
 output:
   xaringan::moon_reader:
     css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
@@ -41,7 +41,6 @@ class: center, middle, inverse, title-slide
 ---
 # Agenda
 
-* About your instructor
 * Syllabus
 * Class meetups
 * Course Schedule
@@ -50,76 +49,29 @@ class: center, middle, inverse, title-slide
 	* Labs
 	* Data Project
 	* Exams
-* Software
-	* The `DATA606` R Package
-	* Using R Markdown
-
----
-
-# A little about me...
-
-* Assistant Professor at CUNY in Data Science and Information Systems
-
-* Principal Investigator for a Department of Education Grant to develop and test the Diagnostic Assessment and Achievement of College Skills ([www.DAACS.net](http://www.daacs.net))  
-
-* Authored over a dozen R packages including:
-	* [likert](http://github.com/jbryer/likert)
-	* [ShinyQDA](http://github.com/jbryer/ShinyQDA)
-	* [DTedit](http://github.com/jbryer/DTedit)
-	* [login](http://github.com/jbryer/login)
-
-* Specialize in propensity score methods. Three new methods/R packages developed include:
-	* [multilevelPSA](http://github.com/jbryer/multilevelPSA)
-	* [TriMatch](http://github.com/jbryer/TriMatch)
-	* [PSAboot](http://github.com/jbryer/PSAboot)
-
----
-
-# Also a Father...
-
-```{r, out.width='65%', fig.align='center', echo=FALSE}
-knitr::include_graphics('images/BoysFall2019.jpg')
-```
-
----
-
-# Runner...
-
-<table border='0' width='100%'><tr><td>
-<center><img src='images/2025DisneyMarathon.jpeg' height='450'></center>
-</td><td>
-<center><img src='images/2019NYCMarathon.jpg' height='450'></center>
-</td></tr></table>
-
----
-
-# And photographer.
-
-```{r, out.width='80%', fig.align='center', echo=FALSE}
-knitr::include_graphics('images/Sleeping_Empire.jpg')
-```
+* Introduction to predictive modeling
 
 ---
 
 # Syllabus `r hexes(c('blogdown', 'rmarkdown'))`
 
-Syllabus and course materials are here: [https://`r paste0(tolower(semester), year)`.data606.net](https://`r paste0(tolower(semester), year)`.data606.net)
+Syllabus and course materials are here: [https://`r paste0(tolower(semester), year)`.is382.net](https://`r paste0(tolower(semester), year)`.is382.net)
 
 The site is built using [Quarto](https://quarto.org) and hosted on [Github](https://github.com/jbryer/`r github_repo`). Each page of the site has a "Edit this page" link at the bottom right, use that to start a pull request on Github.
 
 We will use Brightspace primary for submitting assignments only. Please submit a PDF.
 
 PDFs are preferred for the homework as there is some LaTeX formatting in the R markdown files. The `tineytex` R package helps with install LaTeX, but you can also install LaTeX using [MiKTeX](http://miktex.org) (for Windows) and [BasicTeX](http://www.tug.org/mactex/morepackages.html) (for Mac) See this page for more information: 
-https://`r paste0(tolower(semester), year)`.data606.net/course-overview/software/
+https://`r paste0(tolower(semester), year)`.is382.net/course-overview/software/
 
 ---
 class: font90
 
 # Meetups
 
-We will have meetups on Wednesday evenings at 8:00pm. 
+We will have meetups on `r class_day` evenings from `r class_time`. 
 
-Meetups will be recorded and made available the next day on the [course website](https://spring2024.data606.net/course-overview/meetups/).
+Meetups will be recorded and made available the next day on the [course website](https://`r paste0(tolower(semester), year)`.is382.net).
 
 Though attending live is not strictly required, **I expect everyone to watch the lectures during the week.** I use the class meetups to convey important information and announcements. Very often I will cover some topics not in the textbook. Students who attend the meetups tend to do well on the assignments.
 
@@ -132,7 +84,7 @@ Though attending live is not strictly required, **I expect everyone to watch the
 ]
 
 ---
-
+class: font70
 # Schedule
 
 ```{r schedule-setup, echo=FALSE, warning=FALSE, message=FALSE}
@@ -170,9 +122,6 @@ Diez, D.M., Barr, C.D., & Çetinkaya-Rundel, M. (2019). *OpenIntro Statistics (4
 
 .font70[
 
-This will be our primary textbook for most of the semesters. Our goal is to cover all the chapters.
-
-
 ]
 
 .center[
@@ -185,17 +134,15 @@ This will be our primary textbook for most of the semesters. Our goal is to cove
 
 .pull-right[
 
-Navarro, D. (2018, version 0.6). *Learning Statistics with R*
+James, G., Witten, D., Hastie, T., & Tibshirani, R. (2021). *An Introduction to Statistical Learning with Applications in R (2nd Ed)*.
 
 .font70[
-
-This textbooks has a chapter on Bayesian analysis that we will use at the end of the semester. 
 
 ]
 
 .center[
 
-<a href = "https://github.com/jbryer/DATA606spring2024/blob/master/Resources/Textbooks/lsr-0.6.pdf"><img src = 'images/lsr.png' alt = 'Learning Statistics with R' height = '375px' /></a>
+<a href = "https://fall2026.is382.net/resources/ISLR2.pdf"><img src = 'images/ISL2.jpg' alt = 'An Introduction to Statistical Learning with Applications in R' height = '375px' /></a>
 
 ]
 
@@ -204,6 +151,14 @@ This textbooks has a chapter on Bayesian analysis that we will use at the end of
 ---
 
 # Assignments
+
+* **Weekly labs** (50%). They are available on the course schedule page: [`r paste0(tolower(semester), year)`.is382.net/schedule.html](https://`r paste0(tolower(semester), year)`.is382.net/schedule.html)
+
+* **[Data Project](https://fall2026.is382.net/project.html)** (25%). We will cover this more as the semester progresses, but is similar to what you did for IS381.
+
+* **Final Exam** (15%). This will be completed on Brightspace during the last week of the semester.
+
+* **Participation** (10%). Attending/watching the weekly meetups and completing the one minute papers.
 
 
 ---
@@ -225,7 +180,7 @@ This textbooks has a chapter on Bayesian analysis that we will use at the end of
 
 This is an applied statistics course so we will make extensive use of the [R statistical programming language](https://www.r-project.org).
 
-Install [R](https://cran.r-project.org) and [RStudio](https://rstudio.com) on your own computer. I encourage everyone to do this at some point by the end of the semester. I have instructions on the course website here: https://`r paste0(tolower(semester), year)`.data606.net/course-overview/software/
+Install [R](https://cran.r-project.org) and [RStudio](https://rstudio.com) on your own computer. I encourage everyone to do this at some point by the end of the semester. I have instructions on the course website here: https://`r paste0(tolower(semester), year)`.is382.net/course-overview/software/
 
 You will also need to have [LaTeX](https://www.latex-project.org) installed as well in order to create PDFs. The [`tinytex`](https://yihui.org/tinytex/) R package helps with this process:
 
@@ -234,24 +189,128 @@ install.packages('tinytex')
 tinytex::install_tinytex()
 ```
 
+---
+class: inverse, middle, center
+# Introduction to Predictive Modeling
+
+---
+class: font90, middle
+# Learning...
+
+.pull-left[
+<br/><br/>
+
+> Where is the Life we have lost in living?  
+> Where is the wisdom we have lost in knowledge?  
+> Where is the knowledge we have lost in information?
+
+*Excerpt from [The Rock](https://leavesandpages.com/2013/01/03/poetry-excerpts-from-the-rock-by-t-s-eliot/) by T.S. Eliot*
+]
+.pull-right[
+```{r, echo=FALSE}
+knitr::include_graphics('images/data_information_wisdom_chain.jpg')
+```
+]
+---
+# Data Science Landscape
+
+```{r, echo=FALSE, out.width='35%'}
+knitr::include_graphics('images/data_science_landscape.jpeg')
+```
+
+
+---
+# Types of machine learning algorithms
+
+```{r, echo=FALSE, out.width='80%'}
+knitr::include_graphics('images/algorithm_cheat_sheet.jpeg')
+```
+
+---
+# Supervised vs. Unsupervised Learning
+
+.pull-left[
+**Supervised Learning**
+
+* Starting point: 
+	* Outcome measurement Y (also called dependent variable, response, target).
+	* Vector of p predictor measurements X (also called inputs, regressors, covariates, features, independent variables).
+	* We have training data we can use to estimate the model.
+* Objectives: 
+	* Accurately predict unseen test cases.
+	* Understand which inputs aﬀect the outcome, and how.
+	* Assess the quality of our predictions and inferences.
+
+]
+.pull-right[
+**Unsupervised Learning**
+
+* No outcome variable, just a set of predictors (features) measured on a set of samples.
+* Objective is more fuzzy — find groups of samples that behave similarly, find features that behave similarly, find linear combinations of features with the most variation.
+* Diﬃcult to know how well your are doing.
+* diﬀerent from supervised learning, but can be useful as a pre-processing step for supervised learning.
+]
+
+---
+# Statistical Learning vs. Machine Learning
+
+* Machine learning arose as a subfield of Artificial Intelligence.
+
+* Statistical learning arose as a subfield of Statistics.
+
+* There is much overlap — both fields focus on supervised and unsupervised problems:
+
+* Machine learning has a greater emphasis on large scale applications and prediction accuracy.
+
+* Statistical learning emphasizes models and their interpretability, and precision and uncertainty.
+
+* But the distinction has become more and more blurred, and there is a great deal of “cross-fertilization”.
+
+* Machine learning has the upper hand in Marketing!
+
+---
+# Example of a machine learning problem
+
+```{r, warning = FALSE}
+data(legosets, package = 'brickset')
+legosets <- legosets |> dplyr::filter(year > 2010)
+ggplot(legosets, aes(y = US_retailPrice, x = pieces, color = minifigs)) +
+	geom_point() + geom_smooth(se = FALSE)
+```
+
+---
+# An example from my own work `r hexes(c('DAACS'))`
+
+The Diagnostic Assessment and Achievement of College Skills (DAACS) is a suite of assessments designed to assess college readiness including:
+
+* A Self-Regulated Learning Assessment with approximately 60 items
+	* Using exploratory factor analysis, we combine the items to create four subdomains (i.e. motivaiton, metacognition, strategies, self-efficacy)
+* Math and reading assessment (students complete 18 to 24 items and receive a total score ranging from 0 to 1)
+* Writing assessment (this is machine scored using large language models and predictive models)
+* Feedback views (this is a measure of how many pages students view)
+
+We also have basic demographic data.
+
+Our outcome measure of interest is academic success (e.g. GPA, retention, graduation).
+
+.font80[
+See Bryer, J.M., Akhmedjanova, D., Andrade, H.L., & Lui, A.M. (2021). [The use of predictive modeling for assessing college readiness](https://www.emerald.com/books/edited-volume/18592/chapter-abstract/102195056/The-Use-of-Predictive-Modeling-for-Assessing?redirectedFrom=PDF). In H. Jiao & R.W. Lissitz (Eds.) *Enhancing Effective Instruction and Learning Using Assessment Data,* Emerald Insight. https://doi.org/10.1108/978-1-64802-628-7
+]
 
 ---
 # Next steps... `r hexes(c('DAACS'))`
 
-Before XXX (XXX):
+As soon as possible:
 
-* Complete this Google form: `r formative_assessment`
-* Go to https://cuny.daacs.net and complete the self-regulated learning assessment
 * [Join the Slack channel](`r slack_invite_link`)
 
 Then:
 
-* Start Lab 1 (due XXX)
+* Start the *Introduction to the Modeling* lab (due September 6th)
 
 ---
 class: inverse, right, middle, hide-logo
 
-<!--img src="images/hex/DATA606.png" width="150px"/-->
 
 # Good luck with the semester!
 

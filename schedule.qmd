@@ -5,10 +5,14 @@ editor_options:
   chunk_output_type: console
 ---
 
+```{r, echo=FALSE, results='hide'}
+source('config.R')
+```
+
 This page contains an outline of the topics, content, and assignments for the semester.
 Note that this schedule will be updated as the semester progresses.
 
-**We will have meetups on XXX evenings at X:00pm.**
+**We will have meetups on Monday evenings at 7:00pm.** [Click here to join the meetup](`r meetup_link`).
 
 Meetups will be recorded and made available the next day on the course website. Although attending live is not strictly required, **I expect everyone to watch the lectures during the week**. I use the class meetups to convey important information and announcements. Very often I will cover some topics not in the textbook. Students who attend the meetups tend to do well on the assignments.
 

@@ -15,7 +15,7 @@ source('config.R')
 **COURSE NAME AND NUMBER:** IS382 Predictive Modeling  
 **SEMSTER:** `r semester` `r year`  
 **CREDITS:** 3  
-**PREREQUISITE(S):** IS 210, IS 211, IS 361, IS 362, and [IS 381](https://github.com/jbryer/IS381)  
+**PREREQUISITE(S):** IS 210, IS 211, IS 361, IS 362, and [IS 381](http://is381.net)  
 
 **INSTRUCTOR:** `r instructor`  
 **EMAIL:** [`r instructor_email`](mailto:`r paste0(instructor_email, '?subject=', course)`)  
