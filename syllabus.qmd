@@ -5,7 +5,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-
 ```{r setup, echo=FALSE, fig.align='center', out.width='80%', message=FALSE, warning=FALSE, results='hide'}
 # knitr::include_graphics('images/sps_logo.jpg')
 source('common/functions.R')
