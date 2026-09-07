@@ -22,11 +22,11 @@ slides_uri <- '/slides/'
 # icons::download_fontawesome()
 
 column_mapping <- list(
-	Prepare = icons::fontawesome('readme'),
-	# Slides = icons::fontawesome('chalkboard-teacher'),
-	Video = icons::fontawesome('youtube'),
-	Homework = icons::fontawesome('edit'),
-	Lab = icons::fontawesome('flask')
+	Prepare = fontawesome::fa('readme', fill = 'black'),
+	# Slides = icons::fontawesome('chalkboard-teacher', fill = 'black'),
+	Video = fontawesome::fa('youtube', fill = 'black'),
+	Homework = fontawesome::fa('edit', fill = 'black'),
+	Lab = fontawesome::fa('flask', fill = 'black')
 )
 
 options(knitr.kable.NA = '')
@@ -35,14 +35,21 @@ schedule <- readxl::read_excel('Schedule.xlsx') |> as.data.frame()
 
 # schedule$Start <- format(schedule$Start, '%a, %b %d')
 
+video_rows <- which(!is.na(schedule$Video))
+if(length(video_rows) > 0) {
+	schedule[video_rows,]$Video <- paste0('https://youtu.be/', schedule[video_rows,]$Video)
+}
+
 slides <- !is.na(schedule$Slides)
 if(sum(slides) > 0) {
 	slide_links <- paste0(
 		'<a href="', slides_uri, schedule[slides,]$Slides, '.html" target="_blank" style="text-decoration:none;">',
-		icons::fontawesome('safari'), '</a>',
+		fontawesome::fa('safari', fill = 'black'),
+		'</a>',
 		'&nbsp;&nbsp;',
 		'<a href="', slides_uri, schedule[slides,]$Slides, '.pdf" target="_blank" style="text-decoration:none;">',
-		icons::fontawesome('file-pdf'), '</a>'
+		fontawesome::fa('file-pdf', fill = 'black'),
+		'</a>'
 	)
 	slide_links <- gsub('\\n', '', slide_links)
 	schedule[slides,]$Slides <- slide_links
@@ -61,6 +68,7 @@ for(i in names(column_mapping)) {
 	}
 }
 
+# fontawesome::fa_html_dependency()
 # schedule <- schedule |> dplyr::select(!c(StartTime, EndTime))
 schedule |>
 	knitr::kable(format = 'html',
