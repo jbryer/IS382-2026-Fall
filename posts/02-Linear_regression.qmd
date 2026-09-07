@@ -1,0 +1,16 @@
+---
+title: "Linear regression"
+date: 2026-09-07
+draft: false
+description: "Slides and recording for the *Linear regression* meetup."
+categories: ["Meetups"]
+image: "02-Linear_regression.png"
+---
+
+
+[Click here](/slides/01-Linear_Regression.html#1) to open the slides.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2K6OQ35rk5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+

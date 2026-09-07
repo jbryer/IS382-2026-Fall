@@ -1,8 +1,8 @@
 ---
 title: "Linear Regression"
-subtitle: "DATA 606 - Statistics & Probability for Data Analytics"
-author: Jason Bryer, Ph.D., Angela Lui, Ph.D., and George Hagstrom, Ph.D.
-date: "October 30, 2024"
+subtitle: "IS382 - Predictive Modeling"
+author: Jason Bryer, Ph.D.
+# date: "September 7, 2026"
 output:
   xaringan::moon_reader:
     css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
@@ -38,28 +38,6 @@ class: center, middle, inverse, title-slide
 ### `r metadata$author`
 ### `r metadata$date`
 
----
-# One Minute Paper Results
-
-```{r, echo=FALSE}
-library(googlesheets4)
-omp <- read_sheet(one_minute_paper_results)
-omp <- omp %>% dplyr::filter(Topic == 'Inference for Numerical Data (Chapter 7)')
-source('word_cloud.R')
-```
-
-.pull-left[
-**What was the most important thing you learned during this class?**
-```{r, echo=FALSE, fig.height=9}
-ompWordCloud(omp$`What was the most important thing you learned during this class?`)
-```
-]
-.pull-right[
-**What important question remains unanswered for you?**
-```{r, echo=FALSE, fig.height=9}
-ompWordCloud(omp$`What important question remains unanswered for you?`)
-```
-]
 
 
 ---
@@ -753,8 +731,12 @@ class: left, font140
 ]
 .pull-right[
 ```{r, echo=FALSE, fig.width=5, fig.height=5}
-qrcode::qr_code(one_minute_paper) |> plot(col = c('#FAFAFA', 'black'))
+omp_link <- get_omp_link(
+	semester = paste0(semester, year),
+	course = course,
+	topic = 'Linear Regression')
+qrcode::qr_code(omp_link) |> plot(col = c('#FAFAFA', 'black'))
 ```
 ]
 
-`r one_minute_paper`
+[Click here to complete the One Minute Paper](`r omp_link`)

@@ -9,8 +9,7 @@ instructor_email <- 'jason.bryer@cuny.edu'
 description <- paste0(course, ' Predictive Modeling ', semester, ' ', year)
 github_user <- 'jbryer'
 github_repo <- "IS382-2026-Fall"
-one_minute_paper <- 'https://forms.gle/Kiwvd6ixrnUaWpsb8'
-one_minute_paper_results <- 'https://docs.google.com/spreadsheets/d/1mh8aq4K1yB-0cgbijXCPYT-pGjXvX0cnWEaf3j4fsoU/edit?resourcekey=&gid=658039556#gid=658039556'
+one_minute_paper_results <- 'https://docs.google.com/spreadsheets/d/1b4quQwk8sRzHaQN0nH2n6zFwMxCdZE_eUx_zy7kGtQg/edit?resourcekey=&gid=1311230636#gid=1311230636'
 formative_assessment <- ''
 formative_assessmnet_results <- ''
 slack_invite_link <- 'https://cuny-msds.slack.com/archives/C0BLVF2MJ7Q'
@@ -47,6 +46,25 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE, error = FALSE,
 options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
 
 ##### Utility Functions ############################################################################
+# Get the link to the generic one minute paper Google Form.
+get_omp_link <- function(semester, topic, course) {
+	omp_base_link <- 'https://docs.google.com/forms/d/e/1FAIpQLSdkRhGhJpsgc_0LxAmJpemlf7bni8Qs0ZUmovOVvHaOwOQyhA/viewform?usp=pp_url'
+	course_param <- 'entry.1379071784'
+	semester_param <- 'entry.603740146'
+	topic_param <- 'entry.1577539103'
+	
+	link <- omp_base_link
+	if(!missing(semester)) {
+		link <- paste0(link, '&', semester_param, '=', utils::URLencode(semester))
+	}
+	if(!missing(topic)) {
+		link <- paste0(link, '&', topic_param, '=', utils::URLencode(topic))
+	}
+	if(!missing(course)) {
+		link <- paste0(link, '&', course_param, '=', utils::URLencode(course))
+	}
+	return(link)
+}
 
 # This style was adapted from Max Kuhn: https://github.com/rstudio-conf-2020/applied-ml
 # And Rstudio::conf 2020: https://github.com/rstudio-conf-2020/slide-templates/tree/master/xaringan

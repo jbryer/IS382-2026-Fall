@@ -35,3 +35,5 @@ for(i in pkgs) {
 # 		remotes::install_github(i)
 # 	}
 # }
+
+icons::download_fontawesome()
