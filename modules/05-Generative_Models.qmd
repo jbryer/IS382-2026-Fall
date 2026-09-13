@@ -15,5 +15,10 @@ Download the Rmarkdown file and open it in RStudio. The first part will walk thr
 
 ## Supplemental Videos
 
+{{< video https://www.youtube.com/watch?v=RN_dweQpcpo&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=14 >}}
 
+{{< video https://www.youtube.com/watch?v=RIW3H03MNrE&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=15 >}}
 
+{{< video https://www.youtube.com/watch?v=gPOMLCR1oF8&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=16 >}}
+
+{{< video https://www.youtube.com/watch?v=pZodpSfe9IA&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=17 >}}
