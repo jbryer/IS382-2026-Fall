@@ -720,7 +720,6 @@ summary(sat.lm2)$r.squared
 ```
 
 
-
 ---
 class: left, font140
 # One Minute Paper
@@ -732,11 +731,12 @@ class: left, font140
 .pull-right[
 ```{r, echo=FALSE, fig.width=5, fig.height=5}
 omp_link <- get_omp_link(
-	semester = paste0(semester, year),
 	course = course,
-	topic = 'Linear Regression')
+	semester = paste0(semester, year),
+	topic = 'Linear Regression'
+)
 qrcode::qr_code(omp_link) |> plot(col = c('#FAFAFA', 'black'))
 ```
+.center[.font50[[Scan the QR code or click here to  
+complete the One Minute Paper](`r omp_link`)]]
 ]
-
-[Click here to complete the One Minute Paper](`r omp_link`)

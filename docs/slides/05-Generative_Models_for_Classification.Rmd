@@ -1,0 +1,82 @@
+---
+title: "Generative Models for Classification"
+subtitle: "IS382 - Predictive Modeling"
+author: Jason Bryer, Ph.D.
+# date: "September 28, 2026"
+output:
+  xaringan::moon_reader:
+    css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
+    lib_dir: libs
+    seal: false
+    nature:
+      highlightStyle: solarized-light
+      highlightLanguage: R
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      navigation:
+        scroll: false
+    includes:
+      in_header: [assets/header.html]
+      after_body: [assets/insert-logo.html]
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include = FALSE}
+# Cartoons from https://github.com/allisonhorst/stats-illustrations
+# dplyr based upon https://allisonhorst.shinyapps.io/dplyr-learnr/#section-welcome
+
+source('../config.R')
+
+library(gganimate)
+library(magick)
+library(cowplot)
+library(DT)
+source('../R/roc.R')
+# library(titanic)
+# data("titanic")
+library(VisualStats)
+# library(VisualMLE)
+
+```
+
+class: center, middle, inverse, title-slide
+
+# `r metadata$title`
+## `r metadata$subtitle`
+### `r metadata$author`
+### `r metadata$date`
+
+
+
+---
+# Linear Discriminant Analysis
+
+
+
+
+
+
+
+
+---
+class: left, font140
+# One Minute Paper
+
+.pull-left[
+1. What was the most important thing you learned during this class?
+2. What important question remains unanswered for you?
+]
+.pull-right[
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+omp_link <- get_omp_link(
+	course = course,
+	semester = paste0(semester, year),
+	topic = 'Generative Models for Classification'
+)
+qrcode::qr_code(omp_link) |> plot(col = c('#FAFAFA', 'black'))
+```
+.center[.font50[[Scan the QR code or click here to  
+complete the One Minute Paper](`r omp_link`)]]
+]

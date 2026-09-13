@@ -13,3 +13,7 @@ Download the Rmarkdown file and open it in RStudio. The first part will walk thr
 
 * Generative Models for Classification Lab ([PDF](/assignments/classification/classification.pdf), [Rmarkdown](/assignments/classification.Rmd))
 
+## Supplemental Videos
+
+
+

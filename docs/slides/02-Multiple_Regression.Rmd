@@ -1,8 +1,8 @@
 ---
 title: "Multiple Linear Regression"
-subtitle: "DATA 606 - Statistics & Probability for Data Analytics"
-author: Jason Bryer, Ph.D., Angela Lui, Ph.D., and George Hagstrom, Ph.D.
-date: "November 20, 2024"
+subtitle: "IS382 - Predictive Modeling"
+author: Jason Bryer, Ph.D.
+# date: "September 14, 2026"
 output:
   xaringan::moon_reader:
     css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
@@ -47,31 +47,6 @@ class: center, middle, inverse, title-slide
 ## `r metadata$subtitle`
 ### `r metadata$author`
 ### `r metadata$date`
-
----
-
-# One Minute Paper Results
-
-```{r, echo=FALSE}
-library(googlesheets4)
-omp <- read_sheet(one_minute_paper_results)
-omp <- omp %>% dplyr::filter(Topic == 'Logistic Regression (Chapter 9)')
-source('word_cloud.R')
-```
-
-.pull-left[
-**What was the most important thing you learned during this class?**
-```{r, echo=FALSE, fig.height=9}
-ompWordCloud(omp$`What was the most important thing you learned during this class?`)
-```
-]
-.pull-right[
-**What important question remains unanswered for you?**
-```{r, echo=FALSE, fig.height=9}
-ompWordCloud(omp$`What important question remains unanswered for you?`)
-```
-]
-
 
 
 ---
@@ -429,13 +404,24 @@ where *n* is the number of cases and *p* is the number of predictors (explanator
 * ${ R }_{ adj }^{ 2 }$ applies a penalty for the number of predictors included in the model.
 * Therefore, we choose models with higher ${ R }_{ adj }^{ 2 }$ over others.
 
+
 ---
 class: left, font140
 # One Minute Paper
 
-Complete the one minute paper: 
-`r one_minute_paper`
-
+.pull-left[
 1. What was the most important thing you learned during this class?
 2. What important question remains unanswered for you?
-
+]
+.pull-right[
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+omp_link <- get_omp_link(
+	course = course,
+	semester = paste0(semester, year),
+	topic = 'Multiple Regression'
+)
+qrcode::qr_code(omp_link) |> plot(col = c('#FAFAFA', 'black'))
+```
+.center[.font50[[Scan the QR code or click here to  
+complete the One Minute Paper](`r omp_link`)]]
+]

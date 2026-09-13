@@ -249,6 +249,17 @@
     ]
   },
   {
+    "objectID": "modules/05-Generative_Models.html#supplemental-videos",
+    "href": "modules/05-Generative_Models.html#supplemental-videos",
+    "title": "Generative Methods for Classification",
+    "section": "Supplemental Videos",
+    "text": "Supplemental Videos",
+    "crumbs": [
+      "Topics",
+      "5 - Generative Models for Classification"
+    ]
+  },
+  {
     "objectID": "modules/03-Multiple_Regression.html",
     "href": "modules/03-Multiple_Regression.html",
     "title": "Multiple Regression",
@@ -622,7 +633,7 @@
     "href": "posts/02-Linear_regression.html",
     "title": "Linear regression",
     "section": "",
-    "text": "Click here to open the slides."
+    "text": "Click here to open the slides(PDF)."
   },
   {
     "objectID": "schedule.html",
