@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/03-Multiple_regression.html",
       "/posts/02-Linear_regression.html",
       "/posts/01-Introduction_to_Predictive_Modeling.html",
       "/posts/00-Welcome.html"

@@ -1,0 +1,16 @@
+---
+title: "Multiple regression"
+date: 2026-09-14
+draft: false
+description: "Slides and recording for the *Multiple regression* meetup."
+categories: ["Meetups"]
+image: "03-Multiple_regression.png"
+---
+
+
+[Click here](/slides/02-Multiple_Regression.html#1) to open the slides([PDF](/slides/02-Multiple_Regression.pdf)).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4a3B1VUZ0Ik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
