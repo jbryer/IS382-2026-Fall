@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/04-Maximum_Likelihood_Estimation and_Logistic_Regression.html",
       "/posts/03-Multiple_regression.html",
       "/posts/02-Linear_regression.html",
       "/posts/01-Introduction_to_Predictive_Modeling.html",

@@ -1,0 +1,16 @@
+---
+title: "Maximum Likelihood Estimation and Logistic Regression"
+date: 2026-09-21
+draft: false
+description: "Slides and recording for the *Maximum Likelihood Estimation and Logistic Regression* meetup."
+categories: ["Meetups"]
+image: "04-Maximum_Likelihood_Estimation and_Logistic_Regression.png"
+---
+
+
+[Click here](/slides/03-Logistic_Regression.html#1) to open the slides([PDF](/slides/03-Logistic_Regression.pdf)).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Wd6E7sxzJMQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
