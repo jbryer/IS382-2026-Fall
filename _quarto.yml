@@ -3,6 +3,7 @@ project:
   output-dir: "docs/"
   render:
   - "*.qmd"
+  - "schedule.qmd"
   - "!resources/"
   - "!common/"
   - "!slides/"
