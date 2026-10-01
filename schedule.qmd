@@ -82,4 +82,3 @@ schedule |>
 							width_max = '50px') # Not sure this is working
 ```
 
-
