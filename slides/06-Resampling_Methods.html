@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Resampling Methods</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Jason Bryer, Ph.D." />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/mtheme_max.css" type="text/css" />
+    <link rel="stylesheet" href="assets/fonts_mtheme_max.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: center, middle, inverse, title-slide
+
+# Resampling Methods
+## IS382 - Predictive Modeling
+### Jason Bryer, Ph.D.
+### Week 6
+
+
+
+---
+# Bootstrapping
+
+* First introduced by Efron (1979) in [*Bootstrap Methods: Another Look at the Jackknife*](https://projecteuclid.org/euclid.aos/1176344552).
+
+* Estimates confidence of statistics by resampling *with* replacement.
+
+* The *bootstrap sample* provides an estimate of the sampling distribution.
+
+* The `boot` R package provides a framework for doing bootstrapping: https://www.statmethods.net/advstats/bootstrapping.html
+
+---
+# Bootstrapping Example (Population)
+
+Define our population with a uniform distribution.
+
+
+``` r
+n &lt;- 1e5
+pop &lt;- runif(n, 0, 1)
+mean(pop)
+```
+
+```
+## [1] 0.4999781
+```
+
+&lt;img src="06-Resampling_Methods_files/figure-html/unnamed-chunk-2-1.png" alt="" style="display: block; margin: auto;" /&gt;
+
+---
+# Bootstrapping Example (Sample)
+
+We observe one random sample from the population.
+
+
+``` r
+samp1 &lt;- sample(pop, size = 50)
+```
+
+&lt;img src="06-Resampling_Methods_files/figure-html/unnamed-chunk-4-1.png" alt="" style="display: block; margin: auto;" /&gt;
+
+---
+# Bootsrapping Example (Estimate)
+
+
+``` r
+boot.samples &lt;- numeric(1000) # 1,000 bootstrap samples
+for(i in seq_along(boot.samples)) { 
+	tmp &lt;- sample(samp1, size = length(samp1), replace = TRUE)
+	boot.samples[i] &lt;- mean(tmp)
+}
+head(boot.samples)
+```
+
+```
+## [1] 0.4298443 0.5731988 0.4922695 0.4763085 0.5144343 0.4591576
+```
+
+---
+# Bootsrapping Example (Distribution)
+
+
+``` r
+d &lt;- density(boot.samples)
+h &lt;- hist(boot.samples, plot=FALSE)
+hist(boot.samples, main='Bootstrap Distribution', xlab="", freq=FALSE, 
+     ylim=c(0, max(d$y, h$density)+.5), col='steelblue', border = "white", 
+	 cex.main = 1.5, cex.axis = 1.5, cex.lab = 1.5)
+lines(d, lwd=3)
+```
+
+&lt;img src="06-Resampling_Methods_files/figure-html/unnamed-chunk-6-1.png" alt="" style="display: block; margin: auto;" /&gt;
+
+---
+# 95% confidence interval
+
+
+``` r
+c(mean(boot.samples) - 1.96 * sd(boot.samples), 
+  mean(boot.samples) + 1.96 * sd(boot.samples))
+```
+
+```
+## [1] 0.4034142 0.5727765
+```
+
+The standard deviation of the bootstrap sample is an approximation of the standard error.
+
+---
+# Bootstrapping is not just for means!
+
+
+``` r
+boot.samples.median &lt;- numeric(1000) # 1,000 bootstrap samples
+for(i in seq_along(boot.samples.median)) { 
+	tmp &lt;- sample(samp1, size = length(samp1), replace = TRUE)
+	boot.samples.median[i] &lt;- median(tmp) # NOTICE WE ARE NOW USING THE median FUNCTION!
+}
+head(boot.samples.median)
+```
+
+```
+## [1] 0.5497712 0.5825038 0.4755876 0.2879578 0.3992934 0.5662654
+```
+
+95% confidence interval for the median
+
+
+``` r
+c(mean(boot.samples.median) - 1.96 * sd(boot.samples.median), 
+  mean(boot.samples.median) + 1.96 * sd(boot.samples.median))
+```
+
+```
+## [1] 0.3731672 0.6617643
+```
+
+---
+class: font80
+# Boostrap for linear regression (custom function)
+
+
+``` r
+lm_boot &lt;- function(formula, data, R = 1000, ...) {
+	results &lt;- list()                                                                   # Object to save our results
+	results$full_model &lt;- lm(formula = formula, data = data, ...)                       # Run the full model
+	results$coeficients &lt;- data.frame(row.names = 1:R)                                  # Data frame to store the coeficients
+	for(i in names(results$full_model$coefficients)) {
+		results$coeficients[,i] &lt;- NA
+	}
+	results$fit &lt;- data.frame(row.names = 1:R,                                          # Data frame for the fit statistics
+							  F_statistic = rep(NA, R),
+							  df_numerator = rep(NA, R),
+							  df_denominator = rep(NA, R),
+							  R_squared = rep(NA, R),
+							  Adjusted_R_squared = rep(NA, R))
+	results$sample &lt;- list()                                                            # This will contain the vectors for
+	for(i in seq_len(R)) {                                                              # for the bootstrap samples.
+		results$sample &lt;- sample(nrow(data), size = nrow(data), replace = TRUE)
+		boot_data &lt;- data[results$sample,]
+		boot_lm_out &lt;- lm(formula = formula, data = boot_data, ...)                     # Calling lm with the bootstrap sample
+		boot_lm_out_summary &lt;- summary(boot_lm_out)
+		results$coeficients[i,] &lt;- boot_lm_out$coefficients                             # Saving all the results
+		results$fit[i,] &lt;- c(boot_lm_out_summary$fstatistic, 
+							 boot_lm_out_summary$r.squared, 
+							 boot_lm_out_summary$adj.r.squared)
+	}
+	class(results) &lt;- c('lmboot', 'list')                                               # Changing the class so we can write
+	return(results)                                                                     # custom S3 methods for plot and summary
+}
+```
+
+---
+# S3 OOB and "generic" functions
+
+S3 is an objected oriented framework that works by defining conventions. There are many functions that are considered "generic." You can always tell "generic" functions as the implementation calls a function `UseMethod('function_name')` where `function_name` is the name of the generic (e.g. `plot`, `summary`).
+
+
+``` r
+plot
+```
+
+```
+## function (x, y, ...) 
+## UseMethod("plot")
+## &lt;bytecode: 0xc31ad5e00&gt;
+## &lt;environment: namespace:base&gt;
+```
+
+Objects can have different classes. On the previous slide we changed the `class` to `lmboot`. The `UseMethod` will look for a function with the following format: `generic_function.class_name()`.
+
+When we call `plot()` with our result from `lm_boot()`, R will actually call `plot.lm_boot()`.
+
+---
+class: font80
+# Summary and Plot functions
+
+.pull-left[
+
+Here we are defining the S3 methods for `plot` and `summary`.
+
+
+``` r
+plot.lmboot &lt;- function(x, ...) {
+	coef &lt;- reshape2::melt(x$coeficients, id.vars = NULL)
+	ggplot2::ggplot(coef, ggplot2::aes(x = value, y = variable)) + 
+		ggdist::stat_halfeye(side = 'top') +
+		ggplot2::scale_y_discrete(limits = rev) +
+		ggplot2::xlab('Estimate')
+}
+```
+
+
+]
+.pull-right[
+
+
+``` r
+summary.lmboot &lt;- function(object, ...) {
+	ncols &lt;- ncol(object$coeficients)
+	summary_table &lt;- data.frame(
+		row.names = names(object$coeficients),
+		boot_mean = rep(NA, ncols),
+		boot_se = rep(NA, ncols),
+		boot_median = rep(NA, ncols))
+	for(i in row.names(summary_table)) {
+		summary_table[i,] &lt;- c(
+			mean(object$coeficients[,i]),
+			sd(object$coeficients[,i]),
+			median(object$coeficients[,i])
+		)
+	}
+	summary_table &lt;- cbind(
+		summary(object$full_model)$coefficients[,1:2],
+		summary_table) |&gt; as.data.frame()
+	cat('Coefficients:\n')
+	print(summary_table)
+	cat('\nR-Squared:', mean(object$fit$R_squared), 
+		'(se =', sd(object$fit$R_squared), ')\n')
+	cat('Adjusted R-Squared:', mean(object$fit$Adjusted_R_squared), 
+		'(se =', sd(object$fit$Adjusted_R_squared), ')')
+	invisible(summary_table)
+}
+```
+
+
+]
+
+---
+# Using our custom functions
+
+
+``` r
+data('Auto', package = 'ISLR2')
+boot_out &lt;- lm_boot(mpg ~ cylinders + displacement + horsepower + weight + acceleration + year, data = Auto)
+summary(boot_out)
+```
+
+```
+## Coefficients:
+##                   Estimate   Std. Error     boot_mean      boot_se   boot_median
+## (Intercept)  -1.453525e+01 4.7638818940 -1.418375e+01 4.9545700296 -1.422827e+01
+## cylinders    -3.298591e-01 0.3321041332 -3.472660e-01 0.3114523184 -3.382069e-01
+## displacement  7.678430e-03 0.0073577361  7.924305e-03 0.0083969321  8.254807e-03
+## horsepower   -3.913556e-04 0.0138365215 -2.700511e-04 0.0147399757  1.549855e-04
+## weight       -6.794618e-03 0.0006700227 -6.817239e-03 0.0008219454 -6.769501e-03
+## acceleration  8.527325e-02 0.1020355670  7.979797e-02 0.1333355924  8.257806e-02
+## year          7.533672e-01 0.0526181480  7.509873e-01 0.0519976298  7.525952e-01
+## 
+## R-Squared: 0.8126992 (se = 0.01358161 )
+## Adjusted R-Squared: 0.8097803 (se = 0.01379327 )
+```
+
+---
+# Plot function
+
+
+``` r
+plot(boot_out)
+```
+
+&lt;img src="06-Resampling_Methods_files/figure-html/unnamed-chunk-15-1.png" alt="" style="display: block; margin: auto;" /&gt;
+
+
+---
+class: font80
+# Bootstrap for linear regression (using `car::Boot`)
+
+There are other frameworks for bootstrapping including the [`boot`](https://cran.r-project.org/web/packages/boot/index.html) package and the `Boot()` function in the `car` package. First, we estimate the full model.
+
+
+``` r
+lm_out &lt;- lm(mpg ~ cylinders + displacement + horsepower + weight + acceleration + year, data = Auto)
+summary(lm_out)
+```
+
+```
+## 
+## Call:
+## lm(formula = mpg ~ cylinders + displacement + horsepower + weight + 
+##     acceleration + year, data = Auto)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -8.6927 -2.3864 -0.0801  2.0291 14.3607 
+## 
+## Coefficients:
+##                Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  -1.454e+01  4.764e+00  -3.051  0.00244 ** 
+## cylinders    -3.299e-01  3.321e-01  -0.993  0.32122    
+## displacement  7.678e-03  7.358e-03   1.044  0.29733    
+## horsepower   -3.914e-04  1.384e-02  -0.028  0.97745    
+## weight       -6.795e-03  6.700e-04 -10.141  &lt; 2e-16 ***
+## acceleration  8.527e-02  1.020e-01   0.836  0.40383    
+## year          7.534e-01  5.262e-02  14.318  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 3.435 on 385 degrees of freedom
+## Multiple R-squared:  0.8093,	Adjusted R-squared:  0.8063 
+## F-statistic: 272.2 on 6 and 385 DF,  p-value: &lt; 2.2e-16
+```
+
+---
+class: font80
+# Bootstrap for linear regression (using `car::Boot`)
+
+.pull-left[
+Then we pass the results to the `car::Boot()` function.
+
+
+``` r
+set.seed(2112)
+lm_boot &lt;- car::Boot(lm_out)
+summary(lm_boot)
+```
+
+```
+## 
+## Number of bootstrap replications R = 999 
+##                 original    bootBias     bootSE     bootMed
+## (Intercept)  -1.4535e+01 -1.7005e-01 4.84505716 -14.5345349
+## cylinders    -3.2986e-01  1.1551e-02 0.31583530  -0.3241365
+## displacement  7.6784e-03 -3.6095e-05 0.00822394   0.0077617
+## horsepower   -3.9136e-04  4.5486e-04 0.01364407  -0.0002457
+## weight       -6.7946e-03 -4.4523e-05 0.00078233  -0.0068111
+## acceleration  8.5273e-02  1.0281e-03 0.12454698   0.0887860
+## year          7.5337e-01  2.3507e-03 0.05357928   0.7554141
+```
+
+]
+.pull-right[
+Instead of using standard error (remember which is the standard deviation of the bootstrap distribution), we can use quantiles, here the 2.5% and 97.5% percentiles. This may be better if the bootstrap distribution does not reasonably approximate the normal distribution (although the CLT indicates it should in most situations).
+
+
+``` r
+confint(lm_boot, level = 0.95, type = "perc")
+```
+
+```
+## Bootstrap percent confidence intervals
+## 
+##                      2.5 %       97.5 %
+## (Intercept)  -24.629496905 -5.868224926
+## cylinders     -0.917546064  0.339775915
+## displacement  -0.009076681  0.022960679
+## horsepower    -0.025587070  0.026677207
+## weight        -0.008532166 -0.005420217
+## acceleration  -0.158128785  0.333320304
+## year           0.652184852  0.856692733
+```
+
+]
+
+---
+# Plotting the results
+
+
+
+``` r
+hist(lm_boot)
+```
+
+&lt;img src="06-Resampling_Methods_files/figure-html/unnamed-chunk-19-1.png" alt="" style="display: block; margin: auto;" /&gt;
+
+
+---
+# k-fold validation
+
+&lt;img src="images/k_fold_validation.png" alt="" width="2396" style="display: block; margin: auto;" /&gt;
+
+---
+# Using `tidymodels` for k-fold validation
+
+
+``` r
+set.seed(2112)
+folds &lt;- rsample::vfold_cv(Auto, v = 5)
+
+# Define the model type (e.g., Linear Regression)
+lm_spec &lt;- parsnip::linear_reg() |&gt; parsnip::set_engine("lm")
+
+# Fit the model across all resamples
+cv_results &lt;- tune::fit_resamples(
+  lm_spec,
+  preprocessor = mpg ~ cylinders + displacement + horsepower + weight + acceleration + year,
+  resamples = folds
+)
+
+# Extract evaluation metrics (RMSE, R-squared)
+tune::collect_metrics(cv_results)
+```
+
+```
+## # A tibble: 2 × 6
+##   .metric .estimator  mean     n std_err .config        
+##   &lt;chr&gt;   &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;          
+## 1 rmse    standard   3.49      5  0.276  pre0_mod0_post0
+## 2 rsq     standard   0.804     5  0.0118 pre0_mod0_post0
+```
+
+
+---
+# Recommendations to Prevent Overfitting
+
+1. Split your dataset into a training and validation dataset (typically 70/30 works, but can vary depending on sample size).
+
+2. Use k-fold validation when fitting different models (k = 10 is pretty common). This can be different modeling strategies (e.g. regression, trees, etc.) or different variable sets.
+
+3. Once you decide on the best model in step 3, estimate your model fit statistics with the validation dataset created (and set aside) in step 1. 
+
+---
+class: left, font120
+# One Minute Paper
+
+.pull-left[
+1. What was the most important thing you learned during this class?
+
+2. What important question remains unanswered for you?
+]
+.pull-right[
+&lt;img src="06-Resampling_Methods_files/figure-html/unnamed-chunk-22-1.png" alt="" style="display: block; margin: auto;" /&gt;
+.center[.font50[[Scan the QR code or click here to  
+complete the One Minute Paper](https://docs.google.com/forms/d/e/1FAIpQLSdkRhGhJpsgc_0LxAmJpemlf7bni8Qs0ZUmovOVvHaOwOQyhA/viewform?usp=pp_url&amp;entry.603740146=Fall2026&amp;entry.1577539103=Resampling%20Methods&amp;entry.1379071784=IS382)]]
+]
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+  "highlightStyle": "solarized-light",
+  "highlightLanguage": "R",
+  "highlightLines": true,
+  "countIncrementalSlides": false,
+  "ratio": "16:9",
+  "navigation": {
+    "scroll": false
+  }
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<!-- Source: https://www.garrickadenbuie.com/blog/xaringan-tip-logo-all-slides/ -->
+<style>
+.logo {
+  background-image: url(images/hex/DATA606.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 2em;
+  right: 0.5em;
+  width: 55px;
+  height: 64px;
+  z-index: 0;
+}
+</style>
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    ':not(.title-slide)' +
+    // add additional classes to exclude here, e.g.
+    // ':not(.inverse)' +
+    ':not(.hide-logo)'
+  )
+  .forEach(el => {
+    el.innerHTML += '<div class="logo"></div>';
+  });
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

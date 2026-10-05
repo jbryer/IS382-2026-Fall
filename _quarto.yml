@@ -147,6 +147,6 @@ format:
     #     <link href="/fullcalendar-lib/main.css" rel="stylesheet" />
     #     <script type="text/javascript" src="/fullcalendar-lib/main.js"></script>
 
-freeze: auto
+# freeze: auto # Removing because this doesn't seem to work with "touch filename"
 
 editor: source

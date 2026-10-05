@@ -34,12 +34,14 @@ library("qrcode")
 library("VisualStats") # remotes::install_github('jbryer/VisualStats')
 
 ##### Global Configurations ########################################################################
+ggplot2::theme_set(ggplot2::theme_minimal())
 
 opts_chunk$set(digits = 3, width = 120)
 
 knitr::opts_chunk$set(warning = FALSE, message = FALSE, error = FALSE,
 					  fig.width = 12, fig.height=6, fig.align = 'center',
 					  digits = 3)
+options(width = 120)
 
 # The following is to fix a DT::datatable issue with Xaringan
 # https://github.com/yihui/xaringan/issues/293
