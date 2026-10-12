@@ -1,0 +1,16 @@
+---
+title: "Tree Based Methods"
+date: 2026-10-12
+draft: false
+description: "Slides and recording for the *Tree Based Methods* meetup."
+categories: ["Meetups"]
+image: "07-Tree_Based_Methods.png"
+---
+
+
+[Click here](/slides/07-Trees.html#1) to open the slides([PDF](/slides/07-Trees.pdf)).
+
+
+
+
+
