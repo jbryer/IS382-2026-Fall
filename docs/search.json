@@ -175,7 +175,7 @@
     "href": "modules/08-Ensemble_Methods.html",
     "title": "Ensemble Methods",
     "section": "",
-    "text": "An Introduction to Statistical Learning chapter 8.2.\nHands-on Machine Learning with R has some nice chapters on bagging, random forests, and boosting.",
+    "text": "An Introduction to Statistical Learning chapter 8.2.\nHands-on Machine Learning with R has some nice chapters on bagging, random forests, and boosting.\nDo we Need Hundreds of Classifiers to Solve Real World Classification Problems?",
     "crumbs": [
       "Topics",
       "8 - Ensemble Methods"
@@ -186,7 +186,7 @@
     "href": "modules/08-Ensemble_Methods.html#readings",
     "title": "Ensemble Methods",
     "section": "",
-    "text": "An Introduction to Statistical Learning chapter 8.2.\nHands-on Machine Learning with R has some nice chapters on bagging, random forests, and boosting.",
+    "text": "An Introduction to Statistical Learning chapter 8.2.\nHands-on Machine Learning with R has some nice chapters on bagging, random forests, and boosting.\nDo we Need Hundreds of Classifiers to Solve Real World Classification Problems?",
     "crumbs": [
       "Topics",
       "8 - Ensemble Methods"
@@ -208,7 +208,7 @@
     "href": "modules/08-Ensemble_Methods.html#supplemental-videos",
     "title": "Ensemble Methods",
     "section": "Supplemental Videos",
-    "text": "Supplemental Videos\n{{ https://www.youtube.com/watch?v=omSN-shKM1Y&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=51 }}\n{{ https://www.youtube.com/watch?v=RSWg_islt9c&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=52 }}",
+    "text": "Supplemental Videos",
     "crumbs": [
       "Topics",
       "8 - Ensemble Methods"
@@ -570,7 +570,7 @@
     "href": "modules/07-Tree_Models.html#supplemental-videos",
     "title": "Tree Based Methods",
     "section": "Supplemental Videos",
-    "text": "Supplemental Videos\n{{ https://www.youtube.com/watch?v=XvdLKUOldkE&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=48 }}\n{{ https://www.youtube.com/watch?v=U9ypJ7UFL3I&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=49 }}\n{{ https://www.youtube.com/watch?v=8foe-MKLgtU&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=50 }}",
+    "text": "Supplemental Videos",
     "crumbs": [
       "Topics",
       "7 - Tree Based Methods"
