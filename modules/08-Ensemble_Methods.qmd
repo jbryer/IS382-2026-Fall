@@ -1,5 +1,5 @@
 ---
-title: "Bagging and Random Forests"
+title: "Ensemble Methods"
 ---
 
 
@@ -8,6 +8,7 @@ title: "Bagging and Random Forests"
 
 *An Introduction to Statistical Learning* chapter 8.2.
 
+*Hands-on Machine Learning with R* has some nice chapters on [bagging](https://bradleyboehmke.github.io/HOML/bagging.html), [random forests](https://bradleyboehmke.github.io/HOML/random-forest.html), and [boosting](https://bradleyboehmke.github.io/HOML/gbm.html).
 
 ## Assignments
 
@@ -15,3 +16,9 @@ Download the Rmarkdown file and open it in RStudio. The first part will walk thr
 
 * Bagging and Random Forests Lab ([PDF](/assignments/bagging_and_random_forests/bagging_and_random_forests.pdf), [Rmarkdown](/assignments/bagging_and_random_forests/bagging_and_random_forests.Rmd))
 
+
+## Supplemental Videos
+
+{{ https://www.youtube.com/watch?v=omSN-shKM1Y&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=51 }}
+
+{{ https://www.youtube.com/watch?v=RSWg_islt9c&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=52 }}

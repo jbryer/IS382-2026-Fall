@@ -7,9 +7,19 @@ title: "Tree Based Methods"
 
 *An Introduction to Statistical Learning* chapter 8.1.
 
+*Hands-on Machine Learning with R* has a nice chapter on [tree based methods](https://bradleyboehmke.github.io/HOML/DT.html).
+
+
 ## Assignments
 
 Download the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the *on your own* section at the end. Submit your PDF to Brightspace.
 
 * Tree Based Methods Lab ([PDF](/assignments/decision_trees/decision_trees.pdf), [Rmarkdown](/assignments/decision_trees/decision_trees.Rmd))
 
+## Supplemental Videos
+
+{{ https://www.youtube.com/watch?v=XvdLKUOldkE&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=48 }}
+
+{{ https://www.youtube.com/watch?v=U9ypJ7UFL3I&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=49 }}
+
+{{ https://www.youtube.com/watch?v=8foe-MKLgtU&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=50 }}

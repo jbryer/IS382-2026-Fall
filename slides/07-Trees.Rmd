@@ -531,7 +531,7 @@ class: left, font140
 omp_link <- get_omp_link(
 	course = course,
 	semester = paste0(semester, year),
-	topic = 'Tree Based Methos'
+	topic = 'Tree Based Methods'
 )
 qrcode::qr_code(omp_link) |> plot(col = c('#FAFAFA', 'black'))
 ```

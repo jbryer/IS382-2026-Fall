@@ -77,397 +77,174 @@
     ]
   },
   {
-    "objectID": "posts/06-Resampling_Methods.html",
-    "href": "posts/06-Resampling_Methods.html",
+    "objectID": "posts/07-Tree_Based_Methods.html",
+    "href": "posts/07-Tree_Based_Methods.html",
+    "title": "Tree Based Methods",
+    "section": "",
+    "text": "Click here to open the slides(PDF)."
+  },
+  {
+    "objectID": "posts/04-Maximum_Likelihood_Estimation and_Logistic_Regression.html",
+    "href": "posts/04-Maximum_Likelihood_Estimation and_Logistic_Regression.html",
+    "title": "Maximum Likelihood Estimation and Logistic Regression",
+    "section": "",
+    "text": "Click here to open the slides(PDF)."
+  },
+  {
+    "objectID": "posts/02-Linear_regression.html",
+    "href": "posts/02-Linear_regression.html",
+    "title": "Linear regression",
+    "section": "",
+    "text": "Click here to open the slides(PDF)."
+  },
+  {
+    "objectID": "posts/00-Welcome.html",
+    "href": "posts/00-Welcome.html",
+    "title": "Welcome to IS382!",
+    "section": "",
+    "text": "Welcome to IS382! Couple of important notes as you get started:\n\nJoin the Slack channel by clicking here (or use your @sps.cuny.edu email address). This will be our primary mode of communication.\nFor private communications, you can either send private Slack messages or email me at jason.bryer@cuny.edu.\nOur Meetups will be on Monday from 7:00pm to 8:00pm. I expect everyone to attend or watch the Meetups. Important information will be shared during the meetups that will not be available in any other format.\n\nI am looking forward to getting to know everyone and a fantastic semester! Good luck!"
+  },
+  {
+    "objectID": "modules/12-Missing_Data.html",
+    "href": "modules/12-Missing_Data.html",
+    "title": "Missing Data",
+    "section": "",
+    "text": "Van Buuren & Groothuis-Oudshoorn (2011). mice: Multivariate imputation by chained equations. Journal of Statistical Software. https://www.jstatsoft.org/article/view/v045i03.",
+    "crumbs": [
+      "Topics",
+      "12 - Missing data"
+    ]
+  },
+  {
+    "objectID": "modules/12-Missing_Data.html#readings",
+    "href": "modules/12-Missing_Data.html#readings",
+    "title": "Missing Data",
+    "section": "",
+    "text": "Van Buuren & Groothuis-Oudshoorn (2011). mice: Multivariate imputation by chained equations. Journal of Statistical Software. https://www.jstatsoft.org/article/view/v045i03.",
+    "crumbs": [
+      "Topics",
+      "12 - Missing data"
+    ]
+  },
+  {
+    "objectID": "modules/12-Missing_Data.html#assignments",
+    "href": "modules/12-Missing_Data.html#assignments",
+    "title": "Missing Data",
+    "section": "Assignments",
+    "text": "Assignments\nThis week you should be preparing your project presentation.",
+    "crumbs": [
+      "Topics",
+      "12 - Missing data"
+    ]
+  },
+  {
+    "objectID": "modules/10-Principal_Component_Analysis.html",
+    "href": "modules/10-Principal_Component_Analysis.html",
+    "title": "Principal Component Analysis",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 12.1 and 12.2.",
+    "crumbs": [
+      "Topics",
+      "10 - Principal Component Analysis"
+    ]
+  },
+  {
+    "objectID": "modules/10-Principal_Component_Analysis.html#readings",
+    "href": "modules/10-Principal_Component_Analysis.html#readings",
+    "title": "Principal Component Analysis",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 12.1 and 12.2.",
+    "crumbs": [
+      "Topics",
+      "10 - Principal Component Analysis"
+    ]
+  },
+  {
+    "objectID": "modules/10-Principal_Component_Analysis.html#assignments",
+    "href": "modules/10-Principal_Component_Analysis.html#assignments",
+    "title": "Principal Component Analysis",
+    "section": "Assignments",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nPrincipal Component Analysis Lab (PDF, Rmarkdown)",
+    "crumbs": [
+      "Topics",
+      "10 - Principal Component Analysis"
+    ]
+  },
+  {
+    "objectID": "modules/08-Ensemble_Methods.html",
+    "href": "modules/08-Ensemble_Methods.html",
+    "title": "Ensemble Methods",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 8.2.\nHands-on Machine Learning with R has some nice chapters on bagging, random forests, and boosting.",
+    "crumbs": [
+      "Topics",
+      "8 - Ensemble Methods"
+    ]
+  },
+  {
+    "objectID": "modules/08-Ensemble_Methods.html#readings",
+    "href": "modules/08-Ensemble_Methods.html#readings",
+    "title": "Ensemble Methods",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 8.2.\nHands-on Machine Learning with R has some nice chapters on bagging, random forests, and boosting.",
+    "crumbs": [
+      "Topics",
+      "8 - Ensemble Methods"
+    ]
+  },
+  {
+    "objectID": "modules/08-Ensemble_Methods.html#assignments",
+    "href": "modules/08-Ensemble_Methods.html#assignments",
+    "title": "Ensemble Methods",
+    "section": "Assignments",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nBagging and Random Forests Lab (PDF, Rmarkdown)",
+    "crumbs": [
+      "Topics",
+      "8 - Ensemble Methods"
+    ]
+  },
+  {
+    "objectID": "modules/08-Ensemble_Methods.html#supplemental-videos",
+    "href": "modules/08-Ensemble_Methods.html#supplemental-videos",
+    "title": "Ensemble Methods",
+    "section": "Supplemental Videos",
+    "text": "Supplemental Videos\n{{ https://www.youtube.com/watch?v=omSN-shKM1Y&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=51 }}\n{{ https://www.youtube.com/watch?v=RSWg_islt9c&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=52 }}",
+    "crumbs": [
+      "Topics",
+      "8 - Ensemble Methods"
+    ]
+  },
+  {
+    "objectID": "modules/06-Resampling_Methods.html",
+    "href": "modules/06-Resampling_Methods.html",
     "title": "Resampling Methods",
     "section": "",
-    "text": "Click here to open the slides(PDF)."
-  },
-  {
-    "objectID": "posts/03-Multiple_regression.html",
-    "href": "posts/03-Multiple_regression.html",
-    "title": "Multiple regression",
-    "section": "",
-    "text": "Click here to open the slides(PDF)."
-  },
-  {
-    "objectID": "posts/01-Introduction_to_Predictive_Modeling.html",
-    "href": "posts/01-Introduction_to_Predictive_Modeling.html",
-    "title": "Introduction to Predictive Modeling",
-    "section": "",
-    "text": "Click here to open the slides(PDF)."
-  },
-  {
-    "objectID": "modules/13-Bayesian_Analysis.html",
-    "href": "modules/13-Bayesian_Analysis.html",
-    "title": "Bayesian Analysis",
-    "section": "",
-    "text": "Chapter 17 of Learning Statistics with R (Navarro, version 0.6)\nFitting a Model by Maximum Likelihood (Collier, 2013).\nKruschke’s website for Doing Bayesian Data Analysis\nKruschke’s blog\nAndrew Gelman’s blog - Posts about bayesian statistics",
+    "text": "An Introduction to Statistical Learning chapter 5.",
     "crumbs": [
       "Topics",
-      "13 - Bayesian Analysis"
+      "6 - Resampling Methods"
     ]
   },
   {
-    "objectID": "modules/13-Bayesian_Analysis.html#readings",
-    "href": "modules/13-Bayesian_Analysis.html#readings",
-    "title": "Bayesian Analysis",
+    "objectID": "modules/06-Resampling_Methods.html#readings",
+    "href": "modules/06-Resampling_Methods.html#readings",
+    "title": "Resampling Methods",
     "section": "",
-    "text": "Chapter 17 of Learning Statistics with R (Navarro, version 0.6)\nFitting a Model by Maximum Likelihood (Collier, 2013).\nKruschke’s website for Doing Bayesian Data Analysis\nKruschke’s blog\nAndrew Gelman’s blog - Posts about bayesian statistics",
+    "text": "An Introduction to Statistical Learning chapter 5.",
     "crumbs": [
       "Topics",
-      "13 - Bayesian Analysis"
+      "6 - Resampling Methods"
     ]
   },
   {
-    "objectID": "modules/13-Bayesian_Analysis.html#supplemental-videos",
-    "href": "modules/13-Bayesian_Analysis.html#supplemental-videos",
-    "title": "Bayesian Analysis",
-    "section": "Supplemental Videos",
-    "text": "Supplemental Videos\n\nRasmus Bååth’s Introduction to Bayesian Data Analysis Video Series\n\n\n\n\n\n\n\n\nJohn Kruschke’s Video Series\nBayesian Methods Interpret Data Better\n\n\nBayesian Estimation Supersedes the t Test\n\n\nPrecision is the goal",
-    "crumbs": [
-      "Topics",
-      "13 - Bayesian Analysis"
-    ]
-  },
-  {
-    "objectID": "modules/11-Cluster_Methods.html",
-    "href": "modules/11-Cluster_Methods.html",
-    "title": "Cluster Methods",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 12.3 and 12.4.",
-    "crumbs": [
-      "Topics",
-      "11 - Clustering Methods"
-    ]
-  },
-  {
-    "objectID": "modules/11-Cluster_Methods.html#readings",
-    "href": "modules/11-Cluster_Methods.html#readings",
-    "title": "Cluster Methods",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 12.3 and 12.4.",
-    "crumbs": [
-      "Topics",
-      "11 - Clustering Methods"
-    ]
-  },
-  {
-    "objectID": "modules/11-Cluster_Methods.html#assignments",
-    "href": "modules/11-Cluster_Methods.html#assignments",
-    "title": "Cluster Methods",
+    "objectID": "modules/06-Resampling_Methods.html#assignments",
+    "href": "modules/06-Resampling_Methods.html#assignments",
+    "title": "Resampling Methods",
     "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nClustering Methods Lab (PDF, Rmarkdown)",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nResampling Methods Lab (PDF, Rmarkdown)",
     "crumbs": [
       "Topics",
-      "11 - Clustering Methods"
-    ]
-  },
-  {
-    "objectID": "modules/09-Support_Vector_Machines.html",
-    "href": "modules/09-Support_Vector_Machines.html",
-    "title": "Support Vector Machines",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 9.",
-    "crumbs": [
-      "Topics",
-      "9 - Support Vector Machines"
-    ]
-  },
-  {
-    "objectID": "modules/09-Support_Vector_Machines.html#readings",
-    "href": "modules/09-Support_Vector_Machines.html#readings",
-    "title": "Support Vector Machines",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 9.",
-    "crumbs": [
-      "Topics",
-      "9 - Support Vector Machines"
-    ]
-  },
-  {
-    "objectID": "modules/09-Support_Vector_Machines.html#assignments",
-    "href": "modules/09-Support_Vector_Machines.html#assignments",
-    "title": "Support Vector Machines",
-    "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nSupport Vector Machines Lab (PDF, Rmarkdown)",
-    "crumbs": [
-      "Topics",
-      "9 - Support Vector Machines"
-    ]
-  },
-  {
-    "objectID": "modules/07-Tree_Models.html",
-    "href": "modules/07-Tree_Models.html",
-    "title": "Tree Based Methods",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 8.1.",
-    "crumbs": [
-      "Topics",
-      "7 - Tree Based Methods"
-    ]
-  },
-  {
-    "objectID": "modules/07-Tree_Models.html#readings",
-    "href": "modules/07-Tree_Models.html#readings",
-    "title": "Tree Based Methods",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 8.1.",
-    "crumbs": [
-      "Topics",
-      "7 - Tree Based Methods"
-    ]
-  },
-  {
-    "objectID": "modules/07-Tree_Models.html#assignments",
-    "href": "modules/07-Tree_Models.html#assignments",
-    "title": "Tree Based Methods",
-    "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nTree Based Methods Lab (PDF, Rmarkdown)",
-    "crumbs": [
-      "Topics",
-      "7 - Tree Based Methods"
-    ]
-  },
-  {
-    "objectID": "modules/05-Generative_Models.html",
-    "href": "modules/05-Generative_Models.html",
-    "title": "Generative Methods for Classification",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 4.",
-    "crumbs": [
-      "Topics",
-      "5 - Generative Models for Classification"
-    ]
-  },
-  {
-    "objectID": "modules/05-Generative_Models.html#readings",
-    "href": "modules/05-Generative_Models.html#readings",
-    "title": "Generative Methods for Classification",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 4.",
-    "crumbs": [
-      "Topics",
-      "5 - Generative Models for Classification"
-    ]
-  },
-  {
-    "objectID": "modules/05-Generative_Models.html#assignments",
-    "href": "modules/05-Generative_Models.html#assignments",
-    "title": "Generative Methods for Classification",
-    "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nGenerative Models for Classification Lab (PDF, Rmarkdown)",
-    "crumbs": [
-      "Topics",
-      "5 - Generative Models for Classification"
-    ]
-  },
-  {
-    "objectID": "modules/05-Generative_Models.html#supplemental-videos",
-    "href": "modules/05-Generative_Models.html#supplemental-videos",
-    "title": "Generative Methods for Classification",
-    "section": "Supplemental Videos",
-    "text": "Supplemental Videos",
-    "crumbs": [
-      "Topics",
-      "5 - Generative Models for Classification"
-    ]
-  },
-  {
-    "objectID": "modules/03-Multiple_Regression.html",
-    "href": "modules/03-Multiple_Regression.html",
-    "title": "Multiple Regression",
-    "section": "",
-    "text": "Intro to Modern Statistics chapter 8.",
-    "crumbs": [
-      "Topics",
-      "3 - Multiple regression"
-    ]
-  },
-  {
-    "objectID": "modules/03-Multiple_Regression.html#readings",
-    "href": "modules/03-Multiple_Regression.html#readings",
-    "title": "Multiple Regression",
-    "section": "",
-    "text": "Intro to Modern Statistics chapter 8.",
-    "crumbs": [
-      "Topics",
-      "3 - Multiple regression"
-    ]
-  },
-  {
-    "objectID": "modules/03-Multiple_Regression.html#assignments",
-    "href": "modules/03-Multiple_Regression.html#assignments",
-    "title": "Multiple Regression",
-    "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nMultiple regression Lab (PDF, Rmarkdown)",
-    "crumbs": [
-      "Topics",
-      "3 - Multiple regression"
-    ]
-  },
-  {
-    "objectID": "modules/03-Multiple_Regression.html#supplemental-videos",
-    "href": "modules/03-Multiple_Regression.html#supplemental-videos",
-    "title": "Multiple Regression",
-    "section": "Supplemental Videos",
-    "text": "Supplemental Videos",
-    "crumbs": [
-      "Topics",
-      "3 - Multiple regression"
-    ]
-  },
-  {
-    "objectID": "modules/01-Intro_to_Modeling.html",
-    "href": "modules/01-Intro_to_Modeling.html",
-    "title": "Introduction to Modeling",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 2.",
-    "crumbs": [
-      "Topics",
-      "1 - Introduction to Modeling"
-    ]
-  },
-  {
-    "objectID": "modules/01-Intro_to_Modeling.html#readings",
-    "href": "modules/01-Intro_to_Modeling.html#readings",
-    "title": "Introduction to Modeling",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 2.",
-    "crumbs": [
-      "Topics",
-      "1 - Introduction to Modeling"
-    ]
-  },
-  {
-    "objectID": "modules/01-Intro_to_Modeling.html#assignments",
-    "href": "modules/01-Intro_to_Modeling.html#assignments",
-    "title": "Introduction to Modeling",
-    "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nIntroduction to Modeling Lab (PDF, Rmarkdown)",
-    "crumbs": [
-      "Topics",
-      "1 - Introduction to Modeling"
-    ]
-  },
-  {
-    "objectID": "modules/01-Intro_to_Modeling.html#supplemental-videos",
-    "href": "modules/01-Intro_to_Modeling.html#supplemental-videos",
-    "title": "Introduction to Modeling",
-    "section": "Supplemental Videos",
-    "text": "Supplemental Videos",
-    "crumbs": [
-      "Topics",
-      "1 - Introduction to Modeling"
-    ]
-  },
-  {
-    "objectID": "instructor.html",
-    "href": "instructor.html",
-    "title": "Instructor",
-    "section": "",
-    "text": "Jason Bryer, Ph.D.\nEmail: jason.bryer@cuny.edu\nI am currently an Assistant Professor in Data Science and Information Systems at the City University of New York. Additionally, I am a consultant with Cornell University where he has developed a research and data collection platform for New York State’s Office of Special Education (https://data.osepartnership.org). Prior to joining CUNY, I was Executive Director at Excelsior College where he has served as Principal Investigator of the FIPSE First in the World grant to develop and research the Diagnostic Assessment and Achievement of College Skills along with supporting research and evaluation of other grants at the institution. My research interests include quasi-experimental designs with an emphasis in propensity score analysis, data systems to support formative assessment, and the use of open source software for conducting reproducible research. I have authored of over a dozen R packages, including three related to conducting propensity score analyses. When I’m not crunching numbers, I am a photographer and proud dad to three boys.\n\nContact\nOffice Hours (Zoom is preferred): By appointment. You’re encouraged to schedule an appointment and I have time nearly everyday. You are also encouraged to ask us questions on Slack. If you wish to ask a question in private, you can email me directly.\nFor the most part, you can expect me to respond to questions by email within 24 hours. If you do not hear back from me within 48 hours of sending an email, please resend your message. I will be checking in on the course regularly, just about every day and likely several times each day. Please do not hesitate to ask if you have questions or concerns.",
-    "crumbs": [
-      "Course information",
-      "Instructor"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "IS382 Predictive Modeling",
-    "section": "",
-    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTree Based Methods\n\n\nSlides and recording for the Tree Based Methods meetup.\n\n\n\n\n\nOct 12, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nResampling Methods\n\n\nSlides and recording for the Resampling Methods meetup.\n\n\n\n\n\nOct 5, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nMaximum Likelihood Estimation and Logistic Regression\n\n\nSlides and recording for the Maximum Likelihood Estimation and Logistic Regression meetup.\n\n\n\n\n\nSep 21, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nMultiple regression\n\n\nSlides and recording for the Multiple regression meetup.\n\n\n\n\n\nSep 14, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLinear regression\n\n\nSlides and recording for the Linear regression meetup.\n\n\n\n\n\nSep 7, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Predictive Modeling\n\n\nSlides and recording for the Introduction to Predictive Modeling meetup.\n\n\n\n\n\nAug 31, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to IS382!\n\n\nImportant information on how to get started with this course. Please read this post carefully.\n\n\n\n\n\nMar 13, 2025\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Announcements"
-    ]
-  },
-  {
-    "objectID": "modules/00-Intro_to_Course.html",
-    "href": "modules/00-Intro_to_Course.html",
-    "title": "Introduction to the Course",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 1.",
-    "crumbs": [
-      "Topics",
-      "Introduction to the course"
-    ]
-  },
-  {
-    "objectID": "modules/00-Intro_to_Course.html#readings",
-    "href": "modules/00-Intro_to_Course.html#readings",
-    "title": "Introduction to the Course",
-    "section": "",
-    "text": "An Introduction to Statistical Learning chapter 1.",
-    "crumbs": [
-      "Topics",
-      "Introduction to the course"
-    ]
-  },
-  {
-    "objectID": "modules/00-Intro_to_Course.html#assignments",
-    "href": "modules/00-Intro_to_Course.html#assignments",
-    "title": "Introduction to the Course",
-    "section": "Assignments",
-    "text": "Assignments\n\nComplete the formative assessment.\nIntroduce yourself on Slack.\nMake sure R and RStudio are up-to-date. See the software page for details.",
-    "crumbs": [
-      "Topics",
-      "Introduction to the course"
-    ]
-  },
-  {
-    "objectID": "modules/00-Intro_to_Course.html#supplemental-videos",
-    "href": "modules/00-Intro_to_Course.html#supplemental-videos",
-    "title": "Introduction to the Course",
-    "section": "Supplemental Videos",
-    "text": "Supplemental Videos",
-    "crumbs": [
-      "Topics",
-      "Introduction to the course"
-    ]
-  },
-  {
-    "objectID": "modules/02-Linear_Regression.html",
-    "href": "modules/02-Linear_Regression.html",
-    "title": "Linear Regression",
-    "section": "",
-    "text": "Intro to Modern Statistics chapter 7.",
-    "crumbs": [
-      "Topics",
-      "2 - Linear regression"
-    ]
-  },
-  {
-    "objectID": "modules/02-Linear_Regression.html#readings",
-    "href": "modules/02-Linear_Regression.html#readings",
-    "title": "Linear Regression",
-    "section": "",
-    "text": "Intro to Modern Statistics chapter 7.",
-    "crumbs": [
-      "Topics",
-      "2 - Linear regression"
-    ]
-  },
-  {
-    "objectID": "modules/02-Linear_Regression.html#assignments",
-    "href": "modules/02-Linear_Regression.html#assignments",
-    "title": "Linear Regression",
-    "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nLinear regression Lab (PDF, Rmarkdown)",
-    "crumbs": [
-      "Topics",
-      "2 - Linear regression"
-    ]
-  },
-  {
-    "objectID": "modules/02-Linear_Regression.html#supplemental-videos",
-    "href": "modules/02-Linear_Regression.html#supplemental-videos",
-    "title": "Linear Regression",
-    "section": "Supplemental Videos",
-    "text": "Supplemental Videos",
-    "crumbs": [
-      "Topics",
-      "2 - Linear regression"
+      "6 - Resampling Methods"
     ]
   },
   {
@@ -515,162 +292,414 @@
     ]
   },
   {
-    "objectID": "modules/06-Resampling_Methods.html",
-    "href": "modules/06-Resampling_Methods.html",
-    "title": "Resampling Methods",
+    "objectID": "modules/02-Linear_Regression.html",
+    "href": "modules/02-Linear_Regression.html",
+    "title": "Linear Regression",
     "section": "",
-    "text": "An Introduction to Statistical Learning chapter 5.",
+    "text": "Intro to Modern Statistics chapter 7.",
     "crumbs": [
       "Topics",
-      "6 - Resampling Methods"
+      "2 - Linear regression"
     ]
   },
   {
-    "objectID": "modules/06-Resampling_Methods.html#readings",
-    "href": "modules/06-Resampling_Methods.html#readings",
-    "title": "Resampling Methods",
+    "objectID": "modules/02-Linear_Regression.html#readings",
+    "href": "modules/02-Linear_Regression.html#readings",
+    "title": "Linear Regression",
     "section": "",
-    "text": "An Introduction to Statistical Learning chapter 5.",
+    "text": "Intro to Modern Statistics chapter 7.",
     "crumbs": [
       "Topics",
-      "6 - Resampling Methods"
+      "2 - Linear regression"
     ]
   },
   {
-    "objectID": "modules/06-Resampling_Methods.html#assignments",
-    "href": "modules/06-Resampling_Methods.html#assignments",
-    "title": "Resampling Methods",
+    "objectID": "modules/02-Linear_Regression.html#assignments",
+    "href": "modules/02-Linear_Regression.html#assignments",
+    "title": "Linear Regression",
     "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nResampling Methods Lab (PDF, Rmarkdown)",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nLinear regression Lab (PDF, Rmarkdown)",
     "crumbs": [
       "Topics",
-      "6 - Resampling Methods"
+      "2 - Linear regression"
     ]
   },
   {
-    "objectID": "modules/08-Bagging_and_Random_Forests.html",
-    "href": "modules/08-Bagging_and_Random_Forests.html",
-    "title": "Bagging and Random Forests",
+    "objectID": "modules/02-Linear_Regression.html#supplemental-videos",
+    "href": "modules/02-Linear_Regression.html#supplemental-videos",
+    "title": "Linear Regression",
+    "section": "Supplemental Videos",
+    "text": "Supplemental Videos",
+    "crumbs": [
+      "Topics",
+      "2 - Linear regression"
+    ]
+  },
+  {
+    "objectID": "modules/00-Intro_to_Course.html",
+    "href": "modules/00-Intro_to_Course.html",
+    "title": "Introduction to the Course",
     "section": "",
-    "text": "An Introduction to Statistical Learning chapter 8.2.",
+    "text": "An Introduction to Statistical Learning chapter 1.",
     "crumbs": [
       "Topics",
-      "8 - Bagging and Random Forests"
+      "Introduction to the course"
     ]
   },
   {
-    "objectID": "modules/08-Bagging_and_Random_Forests.html#readings",
-    "href": "modules/08-Bagging_and_Random_Forests.html#readings",
-    "title": "Bagging and Random Forests",
+    "objectID": "modules/00-Intro_to_Course.html#readings",
+    "href": "modules/00-Intro_to_Course.html#readings",
+    "title": "Introduction to the Course",
     "section": "",
-    "text": "An Introduction to Statistical Learning chapter 8.2.",
+    "text": "An Introduction to Statistical Learning chapter 1.",
     "crumbs": [
       "Topics",
-      "8 - Bagging and Random Forests"
+      "Introduction to the course"
     ]
   },
   {
-    "objectID": "modules/08-Bagging_and_Random_Forests.html#assignments",
-    "href": "modules/08-Bagging_and_Random_Forests.html#assignments",
-    "title": "Bagging and Random Forests",
+    "objectID": "modules/00-Intro_to_Course.html#assignments",
+    "href": "modules/00-Intro_to_Course.html#assignments",
+    "title": "Introduction to the Course",
     "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nBagging and Random Forests Lab (PDF, Rmarkdown)",
+    "text": "Assignments\n\nComplete the formative assessment.\nIntroduce yourself on Slack.\nMake sure R and RStudio are up-to-date. See the software page for details.",
     "crumbs": [
       "Topics",
-      "8 - Bagging and Random Forests"
+      "Introduction to the course"
     ]
   },
   {
-    "objectID": "modules/10-Principal_Component_Analysis.html",
-    "href": "modules/10-Principal_Component_Analysis.html",
-    "title": "Principal Component Analysis",
+    "objectID": "modules/00-Intro_to_Course.html#supplemental-videos",
+    "href": "modules/00-Intro_to_Course.html#supplemental-videos",
+    "title": "Introduction to the Course",
+    "section": "Supplemental Videos",
+    "text": "Supplemental Videos",
+    "crumbs": [
+      "Topics",
+      "Introduction to the course"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "IS382 Predictive Modeling",
     "section": "",
-    "text": "An Introduction to Statistical Learning chapter 12.1 and 12.2.",
+    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEnsemble Methods\n\n\nSlides and recording for the Ensemble Methods meetup.\n\n\n\n\n\nOct 19, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nTree Based Methods\n\n\nSlides and recording for the Tree Based Methods meetup.\n\n\n\n\n\nOct 12, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nResampling Methods\n\n\nSlides and recording for the Resampling Methods meetup.\n\n\n\n\n\nOct 5, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nMaximum Likelihood Estimation and Logistic Regression\n\n\nSlides and recording for the Maximum Likelihood Estimation and Logistic Regression meetup.\n\n\n\n\n\nSep 21, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nMultiple regression\n\n\nSlides and recording for the Multiple regression meetup.\n\n\n\n\n\nSep 14, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLinear regression\n\n\nSlides and recording for the Linear regression meetup.\n\n\n\n\n\nSep 7, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Predictive Modeling\n\n\nSlides and recording for the Introduction to Predictive Modeling meetup.\n\n\n\n\n\nAug 31, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to IS382!\n\n\nImportant information on how to get started with this course. Please read this post carefully.\n\n\n\n\n\nMar 13, 2025\n\n\n\n\n\nNo matching items",
     "crumbs": [
-      "Topics",
-      "10 - Principal Component Analysis"
+      "Announcements"
     ]
   },
   {
-    "objectID": "modules/10-Principal_Component_Analysis.html#readings",
-    "href": "modules/10-Principal_Component_Analysis.html#readings",
-    "title": "Principal Component Analysis",
+    "objectID": "instructor.html",
+    "href": "instructor.html",
+    "title": "Instructor",
     "section": "",
-    "text": "An Introduction to Statistical Learning chapter 12.1 and 12.2.",
+    "text": "Jason Bryer, Ph.D.\nEmail: jason.bryer@cuny.edu\nI am currently an Assistant Professor in Data Science and Information Systems at the City University of New York. Additionally, I am a consultant with Cornell University where he has developed a research and data collection platform for New York State’s Office of Special Education (https://data.osepartnership.org). Prior to joining CUNY, I was Executive Director at Excelsior College where he has served as Principal Investigator of the FIPSE First in the World grant to develop and research the Diagnostic Assessment and Achievement of College Skills along with supporting research and evaluation of other grants at the institution. My research interests include quasi-experimental designs with an emphasis in propensity score analysis, data systems to support formative assessment, and the use of open source software for conducting reproducible research. I have authored of over a dozen R packages, including three related to conducting propensity score analyses. When I’m not crunching numbers, I am a photographer and proud dad to three boys.\n\nContact\nOffice Hours (Zoom is preferred): By appointment. You’re encouraged to schedule an appointment and I have time nearly everyday. You are also encouraged to ask us questions on Slack. If you wish to ask a question in private, you can email me directly.\nFor the most part, you can expect me to respond to questions by email within 24 hours. If you do not hear back from me within 48 hours of sending an email, please resend your message. I will be checking in on the course regularly, just about every day and likely several times each day. Please do not hesitate to ask if you have questions or concerns.",
     "crumbs": [
-      "Topics",
-      "10 - Principal Component Analysis"
+      "Course information",
+      "Instructor"
     ]
   },
   {
-    "objectID": "modules/10-Principal_Component_Analysis.html#assignments",
-    "href": "modules/10-Principal_Component_Analysis.html#assignments",
-    "title": "Principal Component Analysis",
+    "objectID": "modules/01-Intro_to_Modeling.html",
+    "href": "modules/01-Intro_to_Modeling.html",
+    "title": "Introduction to Modeling",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 2.",
+    "crumbs": [
+      "Topics",
+      "1 - Introduction to Modeling"
+    ]
+  },
+  {
+    "objectID": "modules/01-Intro_to_Modeling.html#readings",
+    "href": "modules/01-Intro_to_Modeling.html#readings",
+    "title": "Introduction to Modeling",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 2.",
+    "crumbs": [
+      "Topics",
+      "1 - Introduction to Modeling"
+    ]
+  },
+  {
+    "objectID": "modules/01-Intro_to_Modeling.html#assignments",
+    "href": "modules/01-Intro_to_Modeling.html#assignments",
+    "title": "Introduction to Modeling",
     "section": "Assignments",
-    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nPrincipal Component Analysis Lab (PDF, Rmarkdown)",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nIntroduction to Modeling Lab (PDF, Rmarkdown)",
     "crumbs": [
       "Topics",
-      "10 - Principal Component Analysis"
+      "1 - Introduction to Modeling"
     ]
   },
   {
-    "objectID": "modules/12-Missing_Data.html",
-    "href": "modules/12-Missing_Data.html",
-    "title": "Missing Data",
+    "objectID": "modules/01-Intro_to_Modeling.html#supplemental-videos",
+    "href": "modules/01-Intro_to_Modeling.html#supplemental-videos",
+    "title": "Introduction to Modeling",
+    "section": "Supplemental Videos",
+    "text": "Supplemental Videos",
+    "crumbs": [
+      "Topics",
+      "1 - Introduction to Modeling"
+    ]
+  },
+  {
+    "objectID": "modules/03-Multiple_Regression.html",
+    "href": "modules/03-Multiple_Regression.html",
+    "title": "Multiple Regression",
     "section": "",
-    "text": "Van Buuren & Groothuis-Oudshoorn (2011). mice: Multivariate imputation by chained equations. Journal of Statistical Software. https://www.jstatsoft.org/article/view/v045i03.",
+    "text": "Intro to Modern Statistics chapter 8.",
     "crumbs": [
       "Topics",
-      "12 - Missing data"
+      "3 - Multiple regression"
     ]
   },
   {
-    "objectID": "modules/12-Missing_Data.html#readings",
-    "href": "modules/12-Missing_Data.html#readings",
-    "title": "Missing Data",
+    "objectID": "modules/03-Multiple_Regression.html#readings",
+    "href": "modules/03-Multiple_Regression.html#readings",
+    "title": "Multiple Regression",
     "section": "",
-    "text": "Van Buuren & Groothuis-Oudshoorn (2011). mice: Multivariate imputation by chained equations. Journal of Statistical Software. https://www.jstatsoft.org/article/view/v045i03.",
+    "text": "Intro to Modern Statistics chapter 8.",
     "crumbs": [
       "Topics",
-      "12 - Missing data"
+      "3 - Multiple regression"
     ]
   },
   {
-    "objectID": "modules/12-Missing_Data.html#assignments",
-    "href": "modules/12-Missing_Data.html#assignments",
-    "title": "Missing Data",
+    "objectID": "modules/03-Multiple_Regression.html#assignments",
+    "href": "modules/03-Multiple_Regression.html#assignments",
+    "title": "Multiple Regression",
     "section": "Assignments",
-    "text": "Assignments\nThis week you should be preparing your project presentation.",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nMultiple regression Lab (PDF, Rmarkdown)",
     "crumbs": [
       "Topics",
-      "12 - Missing data"
+      "3 - Multiple regression"
     ]
   },
   {
-    "objectID": "posts/00-Welcome.html",
-    "href": "posts/00-Welcome.html",
-    "title": "Welcome to IS382!",
-    "section": "",
-    "text": "Welcome to IS382! Couple of important notes as you get started:\n\nJoin the Slack channel by clicking here (or use your @sps.cuny.edu email address). This will be our primary mode of communication.\nFor private communications, you can either send private Slack messages or email me at jason.bryer@cuny.edu.\nOur Meetups will be on Monday from 7:00pm to 8:00pm. I expect everyone to attend or watch the Meetups. Important information will be shared during the meetups that will not be available in any other format.\n\nI am looking forward to getting to know everyone and a fantastic semester! Good luck!"
+    "objectID": "modules/03-Multiple_Regression.html#supplemental-videos",
+    "href": "modules/03-Multiple_Regression.html#supplemental-videos",
+    "title": "Multiple Regression",
+    "section": "Supplemental Videos",
+    "text": "Supplemental Videos",
+    "crumbs": [
+      "Topics",
+      "3 - Multiple regression"
+    ]
   },
   {
-    "objectID": "posts/02-Linear_regression.html",
-    "href": "posts/02-Linear_regression.html",
-    "title": "Linear regression",
+    "objectID": "modules/05-Generative_Models.html",
+    "href": "modules/05-Generative_Models.html",
+    "title": "Generative Methods for Classification",
     "section": "",
-    "text": "Click here to open the slides(PDF)."
+    "text": "An Introduction to Statistical Learning chapter 4.",
+    "crumbs": [
+      "Topics",
+      "5 - Generative Models for Classification"
+    ]
   },
   {
-    "objectID": "posts/04-Maximum_Likelihood_Estimation and_Logistic_Regression.html",
-    "href": "posts/04-Maximum_Likelihood_Estimation and_Logistic_Regression.html",
-    "title": "Maximum Likelihood Estimation and Logistic Regression",
+    "objectID": "modules/05-Generative_Models.html#readings",
+    "href": "modules/05-Generative_Models.html#readings",
+    "title": "Generative Methods for Classification",
     "section": "",
-    "text": "Click here to open the slides(PDF)."
+    "text": "An Introduction to Statistical Learning chapter 4.",
+    "crumbs": [
+      "Topics",
+      "5 - Generative Models for Classification"
+    ]
   },
   {
-    "objectID": "posts/07-Tree_Based_Methods.html",
-    "href": "posts/07-Tree_Based_Methods.html",
+    "objectID": "modules/05-Generative_Models.html#assignments",
+    "href": "modules/05-Generative_Models.html#assignments",
+    "title": "Generative Methods for Classification",
+    "section": "Assignments",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nGenerative Models for Classification Lab (PDF, Rmarkdown)",
+    "crumbs": [
+      "Topics",
+      "5 - Generative Models for Classification"
+    ]
+  },
+  {
+    "objectID": "modules/05-Generative_Models.html#supplemental-videos",
+    "href": "modules/05-Generative_Models.html#supplemental-videos",
+    "title": "Generative Methods for Classification",
+    "section": "Supplemental Videos",
+    "text": "Supplemental Videos",
+    "crumbs": [
+      "Topics",
+      "5 - Generative Models for Classification"
+    ]
+  },
+  {
+    "objectID": "modules/07-Tree_Models.html",
+    "href": "modules/07-Tree_Models.html",
     "title": "Tree Based Methods",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 8.1.\nHands-on Machine Learning with R has a nice chapter on tree based methods.",
+    "crumbs": [
+      "Topics",
+      "7 - Tree Based Methods"
+    ]
+  },
+  {
+    "objectID": "modules/07-Tree_Models.html#readings",
+    "href": "modules/07-Tree_Models.html#readings",
+    "title": "Tree Based Methods",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 8.1.\nHands-on Machine Learning with R has a nice chapter on tree based methods.",
+    "crumbs": [
+      "Topics",
+      "7 - Tree Based Methods"
+    ]
+  },
+  {
+    "objectID": "modules/07-Tree_Models.html#assignments",
+    "href": "modules/07-Tree_Models.html#assignments",
+    "title": "Tree Based Methods",
+    "section": "Assignments",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nTree Based Methods Lab (PDF, Rmarkdown)",
+    "crumbs": [
+      "Topics",
+      "7 - Tree Based Methods"
+    ]
+  },
+  {
+    "objectID": "modules/07-Tree_Models.html#supplemental-videos",
+    "href": "modules/07-Tree_Models.html#supplemental-videos",
+    "title": "Tree Based Methods",
+    "section": "Supplemental Videos",
+    "text": "Supplemental Videos\n{{ https://www.youtube.com/watch?v=XvdLKUOldkE&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=48 }}\n{{ https://www.youtube.com/watch?v=U9ypJ7UFL3I&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=49 }}\n{{ https://www.youtube.com/watch?v=8foe-MKLgtU&list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&index=50 }}",
+    "crumbs": [
+      "Topics",
+      "7 - Tree Based Methods"
+    ]
+  },
+  {
+    "objectID": "modules/09-Support_Vector_Machines.html",
+    "href": "modules/09-Support_Vector_Machines.html",
+    "title": "Support Vector Machines",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 9.",
+    "crumbs": [
+      "Topics",
+      "9 - Support Vector Machines"
+    ]
+  },
+  {
+    "objectID": "modules/09-Support_Vector_Machines.html#readings",
+    "href": "modules/09-Support_Vector_Machines.html#readings",
+    "title": "Support Vector Machines",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 9.",
+    "crumbs": [
+      "Topics",
+      "9 - Support Vector Machines"
+    ]
+  },
+  {
+    "objectID": "modules/09-Support_Vector_Machines.html#assignments",
+    "href": "modules/09-Support_Vector_Machines.html#assignments",
+    "title": "Support Vector Machines",
+    "section": "Assignments",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nSupport Vector Machines Lab (PDF, Rmarkdown)",
+    "crumbs": [
+      "Topics",
+      "9 - Support Vector Machines"
+    ]
+  },
+  {
+    "objectID": "modules/11-Cluster_Methods.html",
+    "href": "modules/11-Cluster_Methods.html",
+    "title": "Cluster Methods",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 12.3 and 12.4.",
+    "crumbs": [
+      "Topics",
+      "11 - Clustering Methods"
+    ]
+  },
+  {
+    "objectID": "modules/11-Cluster_Methods.html#readings",
+    "href": "modules/11-Cluster_Methods.html#readings",
+    "title": "Cluster Methods",
+    "section": "",
+    "text": "An Introduction to Statistical Learning chapter 12.3 and 12.4.",
+    "crumbs": [
+      "Topics",
+      "11 - Clustering Methods"
+    ]
+  },
+  {
+    "objectID": "modules/11-Cluster_Methods.html#assignments",
+    "href": "modules/11-Cluster_Methods.html#assignments",
+    "title": "Cluster Methods",
+    "section": "Assignments",
+    "text": "Assignments\nDownload the Rmarkdown file and open it in RStudio. The first part will walk through and explain implementing the key concepts for this week. Complete the questions in the on your own section at the end. Submit your PDF to Brightspace.\n\nClustering Methods Lab (PDF, Rmarkdown)",
+    "crumbs": [
+      "Topics",
+      "11 - Clustering Methods"
+    ]
+  },
+  {
+    "objectID": "modules/13-Bayesian_Analysis.html",
+    "href": "modules/13-Bayesian_Analysis.html",
+    "title": "Bayesian Analysis",
+    "section": "",
+    "text": "Chapter 17 of Learning Statistics with R (Navarro, version 0.6)\nFitting a Model by Maximum Likelihood (Collier, 2013).\nKruschke’s website for Doing Bayesian Data Analysis\nKruschke’s blog\nAndrew Gelman’s blog - Posts about bayesian statistics",
+    "crumbs": [
+      "Topics",
+      "13 - Bayesian Analysis"
+    ]
+  },
+  {
+    "objectID": "modules/13-Bayesian_Analysis.html#readings",
+    "href": "modules/13-Bayesian_Analysis.html#readings",
+    "title": "Bayesian Analysis",
+    "section": "",
+    "text": "Chapter 17 of Learning Statistics with R (Navarro, version 0.6)\nFitting a Model by Maximum Likelihood (Collier, 2013).\nKruschke’s website for Doing Bayesian Data Analysis\nKruschke’s blog\nAndrew Gelman’s blog - Posts about bayesian statistics",
+    "crumbs": [
+      "Topics",
+      "13 - Bayesian Analysis"
+    ]
+  },
+  {
+    "objectID": "modules/13-Bayesian_Analysis.html#supplemental-videos",
+    "href": "modules/13-Bayesian_Analysis.html#supplemental-videos",
+    "title": "Bayesian Analysis",
+    "section": "Supplemental Videos",
+    "text": "Supplemental Videos\n\nRasmus Bååth’s Introduction to Bayesian Data Analysis Video Series\n\n\n\n\n\n\n\n\nJohn Kruschke’s Video Series\nBayesian Methods Interpret Data Better\n\n\nBayesian Estimation Supersedes the t Test\n\n\nPrecision is the goal",
+    "crumbs": [
+      "Topics",
+      "13 - Bayesian Analysis"
+    ]
+  },
+  {
+    "objectID": "posts/01-Introduction_to_Predictive_Modeling.html",
+    "href": "posts/01-Introduction_to_Predictive_Modeling.html",
+    "title": "Introduction to Predictive Modeling",
+    "section": "",
+    "text": "Click here to open the slides(PDF)."
+  },
+  {
+    "objectID": "posts/03-Multiple_regression.html",
+    "href": "posts/03-Multiple_regression.html",
+    "title": "Multiple regression",
+    "section": "",
+    "text": "Click here to open the slides(PDF)."
+  },
+  {
+    "objectID": "posts/06-Resampling_Methods.html",
+    "href": "posts/06-Resampling_Methods.html",
+    "title": "Resampling Methods",
+    "section": "",
+    "text": "Click here to open the slides(PDF)."
+  },
+  {
+    "objectID": "posts/08-Ensemble_Methods.html",
+    "href": "posts/08-Ensemble_Methods.html",
+    "title": "Ensemble Methods",
     "section": "",
     "text": "Click here to open the slides(PDF)."
   },
@@ -679,7 +708,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses.\nWe will have meetups on Monday evenings at 7:00pm. Click here to join the meetup.\nMeetups will be recorded and made available the next day on the course website. Although attending live is not strictly required, I expect everyone to watch the lectures during the week. I use the class meetups to convey important information and announcements. Very often I will cover some topics not in the textbook. Students who attend the meetups tend to do well on the assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nStart\nEnd\nMeetup\nTopic\nPrepare\nLab\nSlides\nVideo\nResources\n\n\n\n\n1\n2026-08-31\n2026-09-06\n2026-08-31\nIntroduction to Predictive Modeling\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n2026-09-07\n2026-09-13\n2026-09-07\nLinear regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n2026-09-14\n2026-09-20\n2026-09-14\nMultiple regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n2026-09-21\n2026-09-27\n2026-09-21\nMaximum Likelihood Estimation and Logistic Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n2026-09-28\n2026-10-04\n2026-09-28\nGenerative Models for Classification\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n2026-10-05\n2026-10-11\n2026-10-05\nResampling Methods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n2026-10-12\n2026-10-18\n2026-10-12\nTree Based Methods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n8\n2026-10-19\n2026-10-25\n2026-10-19\nBagging and Random Forests\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n2026-10-26\n2026-11-01\n2026-10-26\nSupport Vector Machines\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n2026-11-02\n2026-11-08\n2026-11-02\nPrincipal Component Analysis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n2026-11-09\n2026-11-15\n2026-11-09\nClustering Methods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n2026-11-16\n2026-11-22\n2026-11-16\nProject Proposal\n\n\n\n\n\n\n\n\n2026-11-23\n2026-11-29\n\nNo Meetup - Thanksgiving\n\n\n\n\n\n\n\n13\n2026-11-30\n2026-12-06\n2026-11-30\nMissing data\n\n\n\n\n\n\n\n\n\n\n\n14\n2026-12-07\n2026-12-13\n2026-12-07\nBayesian Analysis\n\n\n\n\n\n\n\n\n\n\n\n15\n2026-12-14\n2026-12-20\n2026-12-14\nWrap up / Final Presentations",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses.\nWe will have meetups on Monday evenings at 7:00pm. Click here to join the meetup.\nMeetups will be recorded and made available the next day on the course website. Although attending live is not strictly required, I expect everyone to watch the lectures during the week. I use the class meetups to convey important information and announcements. Very often I will cover some topics not in the textbook. Students who attend the meetups tend to do well on the assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nStart\nEnd\nMeetup\nTopic\nPrepare\nLab\nSlides\nVideo\nResources\n\n\n\n\n1\n2026-08-31\n2026-09-06\n2026-08-31\nIntroduction to Predictive Modeling\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n2026-09-07\n2026-09-13\n2026-09-07\nLinear regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n2026-09-14\n2026-09-20\n2026-09-14\nMultiple regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n2026-09-21\n2026-09-27\n2026-09-21\nMaximum Likelihood Estimation and Logistic Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n2026-09-28\n2026-10-04\n2026-09-28\nGenerative Models for Classification\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n2026-10-05\n2026-10-11\n2026-10-05\nResampling Methods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n2026-10-12\n2026-10-18\n2026-10-12\nTree Based Methods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n8\n2026-10-19\n2026-10-25\n2026-10-19\nEnsemble Methods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n2026-10-26\n2026-11-01\n2026-10-26\nSupport Vector Machines\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n2026-11-02\n2026-11-08\n2026-11-02\nPrincipal Component Analysis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n2026-11-09\n2026-11-15\n2026-11-09\nClustering Methods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n2026-11-16\n2026-11-22\n2026-11-16\nProject Proposal\n\n\n\n\n\n\n\n\n2026-11-23\n2026-11-29\n\nNo Meetup - Thanksgiving\n\n\n\n\n\n\n\n13\n2026-11-30\n2026-12-06\n2026-11-30\nMissing data\n\n\n\n\n\n\n\n\n\n\n\n14\n2026-12-07\n2026-12-13\n2026-12-07\nBayesian Analysis\n\n\n\n\n\n\n\n\n\n\n\n15\n2026-12-14\n2026-12-20\n2026-12-14\nWrap up / Final Presentations",
     "crumbs": [
       "Schedule"
     ]
@@ -689,7 +718,7 @@
     "href": "syllabus.html",
     "title": "Syllabus",
     "section": "",
-    "text": "COURSE NAME AND NUMBER: IS382 Predictive Modeling\nSEMSTER: Fall 2026\nCREDITS: 3\nPREREQUISITE(S): IS 210, IS 211, IS 361, IS 362, and IS 381\nINSTRUCTOR: Jason Bryer, Ph.D.\nEMAIL: jason.bryer@cuny.edu\nOFFICE HOURS:\n\nCOURSE DESCRIPTION:\nThis course covers the development of predictive models using the R statistical programming language. Topics cover parametric (e.g. regression), non-parametric (e.g. classification and regression trees), and Bayesian models for predicting quantitative and qualitative outcomes.\n\n\nPROGRAM LEARNING OUTCOMES ADDRESSED BY THIS COURSE:\n\n\nDescribe how information is collected, stored, managed, classified, retrieved, and disseminated\nAnalyze data to solve problems in practical scenarios\nApply skills used to program applications, manage systems, and protect data in complex/heterogeneous computing environments\nApply analytical and statistical methods to retrieve, manipulate, analyze, and visualize data for decision-making\n\n\n\n\nCOURSE LEARNING OUTCOMES:\n\nEffectively use R for conducting analysis, creating reports, and presenting results.\nEstimate predictive models using both parametric and non-parametric models.\nCommunicate the accuracy of predictive models using a variety of fit statistics.\nHave strategies for handling missing data in the predictive modeling pipeline.\nEffectively communicate the results of a predictive models.\n\n\n\nREQUIRED TEXTBOOKS:\nIntroduction to Modern Statistics by Mine Çetinkaya-Rundel and Johanna Hardin. Available for free at https://openintro-ims.netlify.app\nIntroduction to Statistical Learning with Applications in R 2nd Edition by Gareth James, Daniela Witten, Trever Hastie, and Robert Tibshirani. Available for free at https://www.statlearning.com\nFeature Engineering and Selection: A Practical Approach for Predictive Models by Max Kuhn and Kjell Johnson. Available for free at https://bookdown.org/max/FES/\nR for Data Science by Hadley Wickham and Garrett Grolemund. Freely available at https://r4ds.had.co.nz\n\n\nADDITIONAL RESOURCES:\n\nR Software – Download from https://cran.r-project.org\nRStudio Desktop – Download from https://posit.co/downloads/\nWindows users should also download and install RTools from https://cran.r-project.org/bin/windows/Rtools/\nMac users should also download and install Xcode and gfortran. Directions are available here: https://mac.r-project.org/tools/\n\n\n\nASSIGNMENTS AND GRADING:\nData Project (25% Total; Proposal 5%, Final Presentation 20%)\nThe purpose of the data project is for you to conduct a reproducible analysis with a data set of your choosing. There are two components to the project, the proposal, which will be graded on a pass/fail basis, and the final report. The outline for each of these are provided in the templates. When submitting the assignments, include the R Markdown file (change the name to include your last name, for example LASTNAME-Proposal.Rmd and LASTNAME-Project.Rmd) along with any supplementary files necessary to run the R Markdown file (e.g. data files, screenshots, etc.). Suggestions for possible data sources are included below, however you are free to use data not listed below. The only requirement is that you are allowed to share the data. Projects will be shared with others on this website, so they should be presented in a way that other students can reproduce your analysis.\nLabs (52%): R is the statistical software you will use for this course. The labs aim to provide an opportunity for you to apply your statistical content knowledge in the context of problems to solve in R, thus also providing you the opportunity to practice and become familiar with the R platform and language. The labs will be guided; thus, step-by-step procedures will be laid out for you to follow in order to get the desired outputs. Interpretations of results are just as important as the results themselves, so once you have the results, interpret them in the context of the problems. Labs are graded based on completion, accuracy, and thoroughness of results and interpretations.\nFinal Exam (15%): Exams will consist of conceptual, computational, and application questions, an include a combination of multiple choice, short response questions, as well as a data analysis task. The exams will focus on the material covered during the course of the semester. More detail will be provided about the material assessed by each exam closer in time to the actual exams. It should be noted that most of the statistical skills acquired during this class are constantly building upon earlier learning. This means that even though each exam will focus on the preceding section of the course, students might need to recall skills learned in earlier sections.\nParticipation (8%): While attendance at synchronous meetups is not required, it is highly encouraged that you do attend: this is where you can ask questions, participate in-situ, and engage with your professor and peers. In addition, announcements and updates relating to coursework will be reviewed during these meetups. With that said, we understand that extenuating circumstances might not allow some of you to attend. Thus, we have built-in diagnostic and weekly formative assessment assignments that will give us an understanding of your current level of knowledge and lingering gaps in knowledge to be completed after attending or watching the recording of every meetup.\nYou will receive full points upon completion of each of these assignments.\n\n\n\n\n\n\n\n\nCourse Assignments\nPoints or Percentage of Final Grade\n\n\n\n\nParticipation/ Weekly Formative Assessments\n10%\n\n\nProject Proposal\n5%\n\n\nFinal Project Presentation\n20%\n\n\nLabs / Weekly Assignments\n50%\n\n\nFinal Exam\n15%\n\n\n\n\n\n\nCUNY SPS UNDERGRAD GRADING SCALE\n\n\n\n\n\n\n\n\nLetter Grade\nRanges %\nGPA\n\n\n\n\nA\n93 - 100\n4.0\n\n\nA-\n90 - &lt; 92\n3.7\n\n\nB+\n87 - &lt; 90\n3.3\n\n\nB\n83 - &lt; 87\n3.0\n\n\nB-\n80 - &lt; 83\n2.7\n\n\nC+\n77 - &lt; 80\n2.3\n\n\nC\n73 - &lt; 77\n2.0\n\n\nC-\n70 - &lt; 73\n1.7\n\n\nD\n60 - &lt; 70\n1.0\n\n\nF\n&lt; 60\n0.0\n\n\n\n\n\nCOURSE OUTLINE AND SCHEDULE\nSubject to change\n\n\n\n\nWeek\nTopic\n\n\n\n\n1\nIntroduction to Predictive Modeling\n\n\n2\nLinear regression\n\n\n3\nMultiple regression\n\n\n4\nMaximum Likelihood Estimation and Logistic Regression\n\n\n5\nGenerative Models for Classification\n\n\n6\nResampling Methods\n\n\n7\nTree Based Methods\n\n\n8\nBagging and Random Forests\n\n\n9\nSupport Vector Machines\n\n\n10\nPrincipal Component Analysis\n\n\n11\nClustering Methods\n\n\n12\nProject Proposal\n\n\n\nNo Meetup - Thanksgiving\n\n\n13\nMissing data\n\n\n14\nBayesian Analysis\n\n\n15\nWrap up / Final Presentations\n\n\n\n\n\n\nONLINE ETIQUETTE AND ANTI-HARASSMENT POLICY\nThe University strictly prohibits the use of university online resources or facilities, including Blackboard, for the purpose of harassment of any individual or for the posting of any material that is scandalous, libelous, offensive or otherwise against the University’s policies. Please see: “Netiquette in an Online Academic Setting: A Guide for CUNY School of Professional Studies Students.”\n\n\nACADEMIC INTEGRITY\nAcademic dishonesty is unacceptable and will not be tolerated. Cheating, forgery, plagiarism and collusion in dishonest acts undermine the educational mission of the City University of New York and the students’ personal and intellectual growth. Please see: Academic Integrity on the CUNY SPS Website.\nWhatever you produce for this course should be your own work and created specifically for this course. You cannot present work produced by others, nor any work that you presented or will present to another course. If you borrow text or media from another source or paraphrase substantial ideas from someone else, you must provide a reference to your source. If you use text written by a generation system (e.g., entering a prompt into an artificial intelligence tool and using the output in a paper), you must acknowledge its use. I will teach you how to do that in class.\n\n\nUse of Artificial Intelligence (AI)\nFirst, AI is a marketing term. I prefer to be more specific regarding what we are doing:\nMachine Learning (ML) - This course will provide the foundations for how ML algorithms work. Generally speaking, the goal is to predict some known (and sometimes unknown in the case of unsupervised learning models) outcome.\nLarge Language Models (LLM) - This is often what people mean when they say AI. This includes products like ChatGPT, Anthropic, Google Gemini, etc. LLMs generate text, images, videos, etc. from a prompt. The goal of this course is for you to develop the foundation knowledge and skills of statistics. Using chat bots to do the assignments subverts this goal. This is confounded by the fact at the content generated by LLMs is often wrong! However, when you are stuck or looking for help they can be helpful, especially if you use chat bots that provide references and/or links to sources. If you decide to use LLMs to assist in completing any assignment, you must include the prompt and response in your submission.\n\n\nACCESSIBILITY AND ACCOMMODATIONS\nThe CUNY School of Professional Studies is committed to making higher education accessible to students with disabilities by removing architectural barriers and providing programs and support services necessary for them to benefit from the instruction and resources of the University. Early planning is essential for many of the resources and accommodations provided. Please see: Disability Services on the CUNY SPS Website.\n\n\nSTUDENT SUPPORT SERVICES\nIf you need any additional help, please visit Student Support Services: Student Support Services.",
+    "text": "COURSE NAME AND NUMBER: IS382 Predictive Modeling\nSEMSTER: Fall 2026\nCREDITS: 3\nPREREQUISITE(S): IS 210, IS 211, IS 361, IS 362, and IS 381\nINSTRUCTOR: Jason Bryer, Ph.D.\nEMAIL: jason.bryer@cuny.edu\nOFFICE HOURS:\n\nCOURSE DESCRIPTION:\nThis course covers the development of predictive models using the R statistical programming language. Topics cover parametric (e.g. regression), non-parametric (e.g. classification and regression trees), and Bayesian models for predicting quantitative and qualitative outcomes.\n\n\nPROGRAM LEARNING OUTCOMES ADDRESSED BY THIS COURSE:\n\n\nDescribe how information is collected, stored, managed, classified, retrieved, and disseminated\nAnalyze data to solve problems in practical scenarios\nApply skills used to program applications, manage systems, and protect data in complex/heterogeneous computing environments\nApply analytical and statistical methods to retrieve, manipulate, analyze, and visualize data for decision-making\n\n\n\n\nCOURSE LEARNING OUTCOMES:\n\nEffectively use R for conducting analysis, creating reports, and presenting results.\nEstimate predictive models using both parametric and non-parametric models.\nCommunicate the accuracy of predictive models using a variety of fit statistics.\nHave strategies for handling missing data in the predictive modeling pipeline.\nEffectively communicate the results of a predictive models.\n\n\n\nREQUIRED TEXTBOOKS:\nIntroduction to Modern Statistics by Mine Çetinkaya-Rundel and Johanna Hardin. Available for free at https://openintro-ims.netlify.app\nIntroduction to Statistical Learning with Applications in R 2nd Edition by Gareth James, Daniela Witten, Trever Hastie, and Robert Tibshirani. Available for free at https://www.statlearning.com\nFeature Engineering and Selection: A Practical Approach for Predictive Models by Max Kuhn and Kjell Johnson. Available for free at https://bookdown.org/max/FES/\nR for Data Science by Hadley Wickham and Garrett Grolemund. Freely available at https://r4ds.had.co.nz\n\n\nADDITIONAL RESOURCES:\n\nR Software – Download from https://cran.r-project.org\nRStudio Desktop – Download from https://posit.co/downloads/\nWindows users should also download and install RTools from https://cran.r-project.org/bin/windows/Rtools/\nMac users should also download and install Xcode and gfortran. Directions are available here: https://mac.r-project.org/tools/\n\n\n\nASSIGNMENTS AND GRADING:\nData Project (25% Total; Proposal 5%, Final Presentation 20%)\nThe purpose of the data project is for you to conduct a reproducible analysis with a data set of your choosing. There are two components to the project, the proposal, which will be graded on a pass/fail basis, and the final report. The outline for each of these are provided in the templates. When submitting the assignments, include the R Markdown file (change the name to include your last name, for example LASTNAME-Proposal.Rmd and LASTNAME-Project.Rmd) along with any supplementary files necessary to run the R Markdown file (e.g. data files, screenshots, etc.). Suggestions for possible data sources are included below, however you are free to use data not listed below. The only requirement is that you are allowed to share the data. Projects will be shared with others on this website, so they should be presented in a way that other students can reproduce your analysis.\nLabs (52%): R is the statistical software you will use for this course. The labs aim to provide an opportunity for you to apply your statistical content knowledge in the context of problems to solve in R, thus also providing you the opportunity to practice and become familiar with the R platform and language. The labs will be guided; thus, step-by-step procedures will be laid out for you to follow in order to get the desired outputs. Interpretations of results are just as important as the results themselves, so once you have the results, interpret them in the context of the problems. Labs are graded based on completion, accuracy, and thoroughness of results and interpretations.\nFinal Exam (15%): Exams will consist of conceptual, computational, and application questions, an include a combination of multiple choice, short response questions, as well as a data analysis task. The exams will focus on the material covered during the course of the semester. More detail will be provided about the material assessed by each exam closer in time to the actual exams. It should be noted that most of the statistical skills acquired during this class are constantly building upon earlier learning. This means that even though each exam will focus on the preceding section of the course, students might need to recall skills learned in earlier sections.\nParticipation (8%): While attendance at synchronous meetups is not required, it is highly encouraged that you do attend: this is where you can ask questions, participate in-situ, and engage with your professor and peers. In addition, announcements and updates relating to coursework will be reviewed during these meetups. With that said, we understand that extenuating circumstances might not allow some of you to attend. Thus, we have built-in diagnostic and weekly formative assessment assignments that will give us an understanding of your current level of knowledge and lingering gaps in knowledge to be completed after attending or watching the recording of every meetup.\nYou will receive full points upon completion of each of these assignments.\n\n\n\n\n\n\n\n\nCourse Assignments\nPoints or Percentage of Final Grade\n\n\n\n\nParticipation/ Weekly Formative Assessments\n10%\n\n\nProject Proposal\n5%\n\n\nFinal Project Presentation\n20%\n\n\nLabs / Weekly Assignments\n50%\n\n\nFinal Exam\n15%\n\n\n\n\n\n\nCUNY SPS UNDERGRAD GRADING SCALE\n\n\n\n\n\n\n\n\nLetter Grade\nRanges %\nGPA\n\n\n\n\nA\n93 - 100\n4.0\n\n\nA-\n90 - &lt; 92\n3.7\n\n\nB+\n87 - &lt; 90\n3.3\n\n\nB\n83 - &lt; 87\n3.0\n\n\nB-\n80 - &lt; 83\n2.7\n\n\nC+\n77 - &lt; 80\n2.3\n\n\nC\n73 - &lt; 77\n2.0\n\n\nC-\n70 - &lt; 73\n1.7\n\n\nD\n60 - &lt; 70\n1.0\n\n\nF\n&lt; 60\n0.0\n\n\n\n\n\nCOURSE OUTLINE AND SCHEDULE\nSubject to change\n\n\n\n\nWeek\nTopic\n\n\n\n\n1\nIntroduction to Predictive Modeling\n\n\n2\nLinear regression\n\n\n3\nMultiple regression\n\n\n4\nMaximum Likelihood Estimation and Logistic Regression\n\n\n5\nGenerative Models for Classification\n\n\n6\nResampling Methods\n\n\n7\nTree Based Methods\n\n\n8\nEnsemble Methods\n\n\n9\nSupport Vector Machines\n\n\n10\nPrincipal Component Analysis\n\n\n11\nClustering Methods\n\n\n12\nProject Proposal\n\n\n\nNo Meetup - Thanksgiving\n\n\n13\nMissing data\n\n\n14\nBayesian Analysis\n\n\n15\nWrap up / Final Presentations\n\n\n\n\n\n\nONLINE ETIQUETTE AND ANTI-HARASSMENT POLICY\nThe University strictly prohibits the use of university online resources or facilities, including Blackboard, for the purpose of harassment of any individual or for the posting of any material that is scandalous, libelous, offensive or otherwise against the University’s policies. Please see: “Netiquette in an Online Academic Setting: A Guide for CUNY School of Professional Studies Students.”\n\n\nACADEMIC INTEGRITY\nAcademic dishonesty is unacceptable and will not be tolerated. Cheating, forgery, plagiarism and collusion in dishonest acts undermine the educational mission of the City University of New York and the students’ personal and intellectual growth. Please see: Academic Integrity on the CUNY SPS Website.\nWhatever you produce for this course should be your own work and created specifically for this course. You cannot present work produced by others, nor any work that you presented or will present to another course. If you borrow text or media from another source or paraphrase substantial ideas from someone else, you must provide a reference to your source. If you use text written by a generation system (e.g., entering a prompt into an artificial intelligence tool and using the output in a paper), you must acknowledge its use. I will teach you how to do that in class.\n\n\nUse of Artificial Intelligence (AI)\nFirst, AI is a marketing term. I prefer to be more specific regarding what we are doing:\nMachine Learning (ML) - This course will provide the foundations for how ML algorithms work. Generally speaking, the goal is to predict some known (and sometimes unknown in the case of unsupervised learning models) outcome.\nLarge Language Models (LLM) - This is often what people mean when they say AI. This includes products like ChatGPT, Anthropic, Google Gemini, etc. LLMs generate text, images, videos, etc. from a prompt. The goal of this course is for you to develop the foundation knowledge and skills of statistics. Using chat bots to do the assignments subverts this goal. This is confounded by the fact at the content generated by LLMs is often wrong! However, when you are stuck or looking for help they can be helpful, especially if you use chat bots that provide references and/or links to sources. If you decide to use LLMs to assist in completing any assignment, you must include the prompt and response in your submission.\n\n\nACCESSIBILITY AND ACCOMMODATIONS\nThe CUNY School of Professional Studies is committed to making higher education accessible to students with disabilities by removing architectural barriers and providing programs and support services necessary for them to benefit from the instruction and resources of the University. Early planning is essential for many of the resources and accommodations provided. Please see: Disability Services on the CUNY SPS Website.\n\n\nSTUDENT SUPPORT SERVICES\nIf you need any additional help, please visit Student Support Services: Student Support Services.",
     "crumbs": [
       "Course information",
       "Syllabus"

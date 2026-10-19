@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Bagging and Random Forests – IS382 Predictive Modeling</title>
+<title>Ensemble Methods – IS382 Predictive Modeling</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Bagging and Random Forests – IS382 Predictive Modeling">
+<meta property="og:title" content="Ensemble Methods – IS382 Predictive Modeling">
 <meta property="og:description" content="CUNY School of Professional Studies">
 <meta property="og:site_name" content="IS382 Predictive Modeling">
 </head>
@@ -256,7 +256,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-Intro_to_Course.html">Topics</a></li><li class="breadcrumb-item"><a href="../modules/08-Bagging_and_Random_Forests.html">8 - Bagging and Random Forests</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-Intro_to_Course.html">Topics</a></li><li class="breadcrumb-item"><a href="../modules/08-Ensemble_Methods.html">8 - Ensemble Methods</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -421,8 +421,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/08-Bagging_and_Random_Forests.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">8 - Bagging and Random Forests</span></a>
+  <a href="../modules/08-Ensemble_Methods.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">8 - Ensemble Methods</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -467,9 +467,9 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-Intro_to_Course.html">Topics</a></li><li class="breadcrumb-item"><a href="../modules/08-Bagging_and_Random_Forests.html">8 - Bagging and Random Forests</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/00-Intro_to_Course.html">Topics</a></li><li class="breadcrumb-item"><a href="../modules/08-Ensemble_Methods.html">8 - Ensemble Methods</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Bagging and Random Forests</h1>
+<h1 class="title">Ensemble Methods</h1>
 </div>
 
 
@@ -489,6 +489,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="readings" class="level2">
 <h2 class="anchored" data-anchor-id="readings">Readings</h2>
 <p><em>An Introduction to Statistical Learning</em> chapter 8.2.</p>
+<p><em>Hands-on Machine Learning with R</em> has some nice chapters on <a href="https://bradleyboehmke.github.io/HOML/bagging.html">bagging</a>, <a href="https://bradleyboehmke.github.io/HOML/random-forest.html">random forests</a>, and <a href="https://bradleyboehmke.github.io/HOML/gbm.html">boosting</a>.</p>
 </section>
 <section id="assignments" class="level2">
 <h2 class="anchored" data-anchor-id="assignments">Assignments</h2>
@@ -496,6 +497,11 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Bagging and Random Forests Lab (<a href="../assignments/bagging_and_random_forests/bagging_and_random_forests.pdf">PDF</a>, <a href="../assignments/bagging_and_random_forests/bagging_and_random_forests.Rmd">Rmarkdown</a>)</li>
 </ul>
+</section>
+<section id="supplemental-videos" class="level2">
+<h2 class="anchored" data-anchor-id="supplemental-videos">Supplemental Videos</h2>
+<p>{{ https://www.youtube.com/watch?v=omSN-shKM1Y&amp;list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&amp;index=51 }}</p>
+<p>{{ https://www.youtube.com/watch?v=RSWg_islt9c&amp;list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V&amp;index=52 }}</p>
 
 
 </section>
@@ -931,4 +937,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://jbryer.github.io/IS382-2026-Fall/edit/master/website/modules/08-Bagging_and_Random_Forests.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://jbryer.github.io/IS382-2026-Fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://jbryer.github.io/IS382-2026-Fall/edit/master/website/modules/08-Ensemble_Methods.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://jbryer.github.io/IS382-2026-Fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

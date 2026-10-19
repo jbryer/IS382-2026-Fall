@@ -120,8 +120,8 @@ website:
             text: "6 - Resampling Methods"
           - href: modules/07-Tree_Models.qmd
             text: "7 - Tree Based Methods"
-          - href: modules/08-Bagging_and_Random_Forests.qmd
-            text: "8 - Bagging and Random Forests"
+          - href: modules/08-Ensemble_Methods.qmd
+            text: "8 - Ensemble Methods"
           - href: modules/09-Support_Vector_Machines.qmd
             text: "9 - Support Vector Machines"
           - href: modules/10-Principal_Component_Analysis.qmd
