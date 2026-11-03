@@ -1,0 +1,229 @@
+---
+title: "Principal Component Analysis"
+subtitle: "IS382 - Predictive Modeling"
+author: Jason Bryer
+date: "Week 10"
+output:
+  xaringan::moon_reader:
+    css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
+    lib_dir: libs
+    seal: false
+    nature:
+      highlightStyle: solarized-light
+      highlightLanguage: R
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      navigation:
+        scroll: false
+    includes:
+      in_header: [assets/header.html]
+      after_body: [assets/insert-logo.html]
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include = FALSE}
+# Adapted from https://www.datacamp.com/tutorial/pca-analysis-r
+
+source('../config.R')
+
+library(gganimate)
+library(magick)
+library(cowplot)
+library(DT)
+library(ggplot2)
+library(VisualStats)
+```
+
+class: center, middle, inverse, title-slide
+
+# `r metadata$title`
+## `r metadata$subtitle`
+### `r metadata$author`
+### `r metadata$date`
+
+
+---
+class: font80
+# Principal Component Analysis (PCA)
+
+Principal Component Analysis (PCA) is an unsuppervised (i.e. no outcome or dependent variable used) statistical and linear algebra technique used to reduce the dimensionality of a dataset while keeping as much important information and variance as possible.
+
+How it works:
+
+* First Principal Component (PC1): The new axis or direction that captures the largest amount of total variance (spread) in the data.
+
+* Second Principal Component (PC2): The direction that captures the next highest amount of variance while remaining orthogonal (at a 90-degree angle) to PC1.
+
+* Subsequent PCs: Additional orthogonal axes that capture progressively smaller amounts of remaining variance.
+
+The math behind PCA relies on standardizing the data, computing a covariance matrix, and extracting [eigenvectors](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) (which define the new directions) and [eigenvalues](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) (which measure how much variance each direction holds).
+
+---
+# Applications of PCA
+
+* Data Visualization: Compresses high-dimensional datasets into 2D or 3D scatter plots so you can visually spot clusters, trends, or outliers. 
+
+* Machine Learning Preprocessing: Reduces the number of features to speed up training time and prevent overfitting. 
+
+* Noise Filtering & Compression: Drops minor components that carry little variance, stripping away random noise while preserving the core signal.
+
+---
+# Example: Protein Data
+
+The protein dataset is a real-valued multivariate dataset describing the average protein consumption by citizens of 25 European countries. 
+
+For each country, there are ten columns. The first eight correspond to the different types of proteins. The last one corresponds to the total value of the average values of proteins.
+
+```{r}
+protein_data <- read.csv("../data/protein.csv")
+str(protein_data)
+```
+
+---
+# Normalize the data
+
+Because we are we are working with variances across all the variables, it is very important that they all have the same variance. Let's convert all the numeric columns to z-scores (i.e. mean = 0, standard deviation = 1).
+
+```{r}
+data_normalized <- protein_data |>
+	dplyr::select(!Country) |>
+	dplyr::mutate(dplyr::across(where(is.numeric), scale))
+```
+
+
+---
+# Visualizing the correlation matrix
+
+.pull-left[
+```{r, fig.width=10, fig.height=8}
+corr_matrix <- cor(data_normalized)
+ggcorrplot::ggcorrplot(corr_matrix, hc.order = TRUE, 
+					   type = "lower", lab = TRUE)
+```
+
+]
+.pull-right[
+
+The heatmap reveals strong positive correlations between animal protein sources (red meat, white meat, eggs, and milk), which explains why the first principal component captures nearly 77% of total variance. This correlation structure is exactly what PCA is designed to exploit.
+
+]
+
+---
+# Applying PCA
+
+```{r}
+data.pca <- princomp(data_normalized)
+summary(data.pca)
+```
+
+
+---
+# Loadings
+
+```{r}
+data.pca$loadings[, 1:2]
+```
+
+---
+# Scree Plot
+
+```{r}
+factoextra::fviz_eig(data.pca, addlabels = TRUE)
+```
+
+---
+# Contribution of each variable
+
+```{r}
+factoextra::fviz_cos2(data.pca, choice = "var", axes = 1:2)
+```
+
+---
+# Biplot of the attributes
+
+.pull-left[
+
+With the biplot, it is possible to visualize the similarities and dissimilarities between the samples, and further shows the impact of each attribute on each of the principal components.
+
+]
+.pull-right[
+
+```{r, fig.width=8, fig.height=6}
+factoextra::fviz_pca_var(data.pca, col.var = "black")
+```
+
+]
+
+---
+# Biplot combined with cos2
+
+.pull-left[
+
+The biplot and attributes importance can be combined to create a single biplot, where attributes with similar cos2 scores will have similar colors. 
+
+* High cos2 attributes are colored in green: Cereals, pulses, oilseeds, eggs, and milk.  
+* Mid cos2 attributes have an orange color: white meat, starchy food, fish, and red meat.
+* Finally, low cos2 attributes have a black color: fruits and vegetables, 
+
+]
+.pull-right[
+
+```{r, fig.width=8, fig.height=6}
+factoextra::fviz_pca_var(
+	data.pca, col.var = "cos2",
+	gradient.cols = c("black", "orange", "green"),
+	repel = TRUE)
+```
+
+]
+
+---
+# How to choose the number of components
+
+* **Elbow rule**: Look at the scree plot and find where the curve bends sharply. Components to the right of the elbow contribute little additional variance.
+
+* **Variance threshold**: Retain enough components to explain 80% to 90% of the total variance. In this dataset, the first two components already explain about 89%.
+
+---
+class: font80
+# Limitations of PCA
+
+1. Assumption of Linearity
+
+2. Loss of Interpretability (try [Exploratory Factor Analysis](https://en.wikipedia.org/wiki/Exploratory_factor_analysis) if interpretability is important)
+	
+	* Combined features: The new principal components are linear combinations of all original features.
+	* Obscured meaning: It becomes difficult or impossible to map a specific principal component back to an intuitive, real-world meaning from the original variables.
+
+3. Sensitivity to Scale and Standardization
+
+	* Scale-dependent: PCA relies heavily on variance. If features are on vastly different scales (e.g., measuring one variable in millimeters and another in kilometers), the feature with the larger numerical variance will dominate the principal components.
+	* Requirement: Data must be mean-centered and standardized (scaled to unit variance) before applying PCA.
+
+4. Variance Does Not Equal Importance
+
+	* Low-variance traps: PCA assumes that directions with the highest variance contain the most important signal.
+	* Ignored structure: Sometimes, critical patterns, anomaly classes, or target-relevant information reside in low-variance dimensions. Additionally, PCA is an unsupervised technique—it does not look at target/label variables to see if high-variance components actually help classification or prediction. 
+
+---
+class: left, font140
+# One Minute Paper
+
+.pull-left[
+1. What was the most important thing you learned during this class?
+2. What important question remains unanswered for you?
+]
+.pull-right[
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+omp_link <- get_omp_link(
+	course = course,
+	semester = paste0(semester, year),
+	topic = 'Principal Component Analysis'
+)
+qrcode::qr_code(omp_link) |> plot(col = c('#FAFAFA', 'black'))
+```
+.center[.font50[[Scan the QR code or click here to  
+complete the One Minute Paper](`r omp_link`)]]
+]

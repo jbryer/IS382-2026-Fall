@@ -226,7 +226,7 @@ n_marked <- rep(NA, n_draw)
 for(i in 1:n_draw) {
 	n_marked[i] <- pick_fish(n_fish[i])
 }
-head(n_marked, n=10)
+head(n_marked, n = 10)
 ```
 
 ---

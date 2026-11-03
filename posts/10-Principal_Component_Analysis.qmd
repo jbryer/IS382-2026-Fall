@@ -1,0 +1,16 @@
+---
+title: "Principal Component Analysis"
+date: 2026-11-02
+draft: false
+description: "Slides and recording for the *Principal Component Analysis* meetup."
+categories: ["Meetups"]
+image: "10-Principal_Component_Analysis.png"
+---
+
+
+[Click here](/slides/10-Principal_Component_Analysis.html#1) to open the slides([PDF](/slides/10-Principal_Component_Analysis.pdf)).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pXtb0mX5-EA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+

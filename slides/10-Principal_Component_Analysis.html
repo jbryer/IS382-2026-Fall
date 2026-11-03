@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Principal Component Analysis</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Jason Bryer" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/mtheme_max.css" type="text/css" />
+    <link rel="stylesheet" href="assets/fonts_mtheme_max.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: center, middle, inverse, title-slide
+
+# Principal Component Analysis
+## IS382 - Predictive Modeling
+### Jason Bryer
+### Week 10
+
+
+---
+class: font80
+# Principal Component Analysis (PCA)
+
+Principal Component Analysis (PCA) is an unsuppervised (i.e. no outcome or dependent variable used) statistical and linear algebra technique used to reduce the dimensionality of a dataset while keeping as much important information and variance as possible.
+
+How it works:
+
+* First Principal Component (PC1): The new axis or direction that captures the largest amount of total variance (spread) in the data.
+
+* Second Principal Component (PC2): The direction that captures the next highest amount of variance while remaining orthogonal (at a 90-degree angle) to PC1.
+
+* Subsequent PCs: Additional orthogonal axes that capture progressively smaller amounts of remaining variance.
+
+The math behind PCA relies on standardizing the data, computing a covariance matrix, and extracting [eigenvectors](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) (which define the new directions) and [eigenvalues](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) (which measure how much variance each direction holds).
+
+---
+# Applications of PCA
+
+* Data Visualization: Compresses high-dimensional datasets into 2D or 3D scatter plots so you can visually spot clusters, trends, or outliers. 
+
+* Machine Learning Preprocessing: Reduces the number of features to speed up training time and prevent overfitting. 
+
+* Noise Filtering &amp; Compression: Drops minor components that carry little variance, stripping away random noise while preserving the core signal.
+
+---
+# Example: Protein Data
+
+The protein dataset is a real-valued multivariate dataset describing the average protein consumption by citizens of 25 European countries. 
+
+For each country, there are ten columns. The first eight correspond to the different types of proteins. The last one corresponds to the total value of the average values of proteins.
+
+
+``` r
+protein_data &lt;- read.csv("../data/protein.csv")
+str(protein_data)
+```
+
+```
+## 'data.frame':	25 obs. of  10 variables:
+##  $ Country  : chr  "Albania" "Austria" "Belgium" "Bulgaria" ...
+##  $ RedMeat  : num  10.1 8.9 13.5 7.8 9.7 10.6 8.4 9.5 18 10.2 ...
+##  $ WhiteMeat: num  1.4 14 9.3 6 11.4 10.8 11.6 4.9 9.9 3 ...
+##  $ Eggs     : num  0.5 4.3 4.1 1.6 2.8 3.7 3.7 2.7 3.3 2.8 ...
+##  $ Milk     : num  8.9 19.9 17.5 8.3 12.5 25 11.1 33.7 19.5 17.6 ...
+##  $ Fish     : num  0.2 2.1 4.5 1.2 2 9.9 5.4 5.8 5.7 5.9 ...
+##  $ Cereals  : num  42.3 28 26.6 56.7 34.3 21.9 24.6 26.3 28.1 41.7 ...
+##  $ Starch   : num  0.6 3.6 5.7 1.1 5 4.8 6.5 5.1 4.8 2.2 ...
+##  $ Nuts     : num  5.5 1.3 2.1 3.7 1.1 0.7 0.8 1 2.4 7.8 ...
+##  $ Fr.Veg   : num  1.7 4.3 4 4.2 4 2.4 3.6 1.4 6.5 6.5 ...
+```
+
+---
+# Normalize the data
+
+Because we are we are working with variances across all the variables, it is very important that they all have the same variance. Let's convert all the numeric columns to z-scores (i.e. mean = 0, standard deviation = 1).
+
+
+``` r
+data_normalized &lt;- protein_data |&gt;
+	dplyr::select(!Country) |&gt;
+	dplyr::mutate(dplyr::across(where(is.numeric), scale))
+```
+
+
+---
+# Visualizing the correlation matrix
+
+.pull-left[
+
+``` r
+corr_matrix &lt;- cor(data_normalized)
+ggcorrplot::ggcorrplot(corr_matrix, hc.order = TRUE, 
+					   type = "lower", lab = TRUE)
+```
+
+&lt;img src="10-Principal_Component_Analysis_files/figure-html/unnamed-chunk-3-1.png" alt="" style="display: block; margin: auto;" /&gt;
+
+]
+.pull-right[
+
+The heatmap reveals strong positive correlations between animal protein sources (red meat, white meat, eggs, and milk), which explains why the first principal component captures nearly 77% of total variance. This correlation structure is exactly what PCA is designed to exploit.
+
+]
+
+---
+# Applying PCA
+
+
+``` r
+data.pca &lt;- princomp(data_normalized)
+summary(data.pca)
+```
+
+```
+## Importance of components:
+##                           Comp.1    Comp.2    Comp.3    Comp.4    Comp.5     Comp.6     Comp.7     Comp.8     Comp.9
+## Standard deviation     1.9611680 1.2528366 1.0405781 0.9573283 0.6672967 0.55868214 0.51062910 0.33412607 0.30845977
+## Proportion of Variance 0.4451597 0.1816666 0.1253244 0.1060738 0.0515376 0.03612566 0.03017848 0.01292132 0.01101243
+## Cumulative Proportion  0.4451597 0.6268263 0.7521507 0.8582245 0.9097621 0.94588776 0.97606624 0.98898757 1.00000000
+```
+
+
+---
+# Loadings
+
+
+``` r
+data.pca$loadings[, 1:2]
+```
+
+```
+##               Comp.1      Comp.2
+## RedMeat    0.3026094  0.05625165
+## WhiteMeat  0.3105562  0.23685334
+## Eggs       0.4266785  0.03533576
+## Milk       0.3777273  0.18458877
+## Fish       0.1356499 -0.64681970
+## Cereals   -0.4377434  0.23348508
+## Starch     0.2972477 -0.35282564
+## Nuts      -0.4203344 -0.14331056
+## Fr.Veg    -0.1104199 -0.53619004
+```
+
+---
+# Scree Plot
+
+
+``` r
+factoextra::fviz_eig(data.pca, addlabels = TRUE)
+```
+
+&lt;img src="10-Principal_Component_Analysis_files/figure-html/unnamed-chunk-6-1.png" alt="" style="display: block; margin: auto;" /&gt;
+
+---
+# Contribution of each variable
+
+
+``` r
+factoextra::fviz_cos2(data.pca, choice = "var", axes = 1:2)
+```
+
+&lt;img src="10-Principal_Component_Analysis_files/figure-html/unnamed-chunk-7-1.png" alt="" style="display: block; margin: auto;" /&gt;
+
+---
+# Biplot of the attributes
+
+.pull-left[
+
+With the biplot, it is possible to visualize the similarities and dissimilarities between the samples, and further shows the impact of each attribute on each of the principal components.
+
+]
+.pull-right[
+
+
+``` r
+factoextra::fviz_pca_var(data.pca, col.var = "black")
+```
+
+&lt;img src="10-Principal_Component_Analysis_files/figure-html/unnamed-chunk-8-1.png" alt="" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+# Biplot combined with cos2
+
+.pull-left[
+
+The biplot and attributes importance can be combined to create a single biplot, where attributes with similar cos2 scores will have similar colors. 
+
+* High cos2 attributes are colored in green: Cereals, pulses, oilseeds, eggs, and milk.  
+* Mid cos2 attributes have an orange color: white meat, starchy food, fish, and red meat.
+* Finally, low cos2 attributes have a black color: fruits and vegetables, 
+
+]
+.pull-right[
+
+
+``` r
+factoextra::fviz_pca_var(
+	data.pca, col.var = "cos2",
+	gradient.cols = c("black", "orange", "green"),
+	repel = TRUE)
+```
+
+&lt;img src="10-Principal_Component_Analysis_files/figure-html/unnamed-chunk-9-1.png" alt="" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+# How to choose the number of components
+
+* **Elbow rule**: Look at the scree plot and find where the curve bends sharply. Components to the right of the elbow contribute little additional variance.
+
+* **Variance threshold**: Retain enough components to explain 80% to 90% of the total variance. In this dataset, the first two components already explain about 89%.
+
+---
+class: font80
+# Limitations of PCA
+
+1. Assumption of Linearity
+
+2. Loss of Interpretability (try [Exploratory Factor Analysis](https://en.wikipedia.org/wiki/Exploratory_factor_analysis) if interpretability is important)
+	
+	* Combined features: The new principal components are linear combinations of all original features.
+	* Obscured meaning: It becomes difficult or impossible to map a specific principal component back to an intuitive, real-world meaning from the original variables.
+
+3. Sensitivity to Scale and Standardization
+
+	* Scale-dependent: PCA relies heavily on variance. If features are on vastly different scales (e.g., measuring one variable in millimeters and another in kilometers), the feature with the larger numerical variance will dominate the principal components.
+	* Requirement: Data must be mean-centered and standardized (scaled to unit variance) before applying PCA.
+
+4. Variance Does Not Equal Importance
+
+	* Low-variance traps: PCA assumes that directions with the highest variance contain the most important signal.
+	* Ignored structure: Sometimes, critical patterns, anomaly classes, or target-relevant information reside in low-variance dimensions. Additionally, PCA is an unsupervised technique—it does not look at target/label variables to see if high-variance components actually help classification or prediction. 
+
+---
+class: left, font140
+# One Minute Paper
+
+.pull-left[
+1. What was the most important thing you learned during this class?
+2. What important question remains unanswered for you?
+]
+.pull-right[
+&lt;img src="10-Principal_Component_Analysis_files/figure-html/unnamed-chunk-10-1.png" alt="" style="display: block; margin: auto;" /&gt;
+.center[.font50[[Scan the QR code or click here to  
+complete the One Minute Paper](https://docs.google.com/forms/d/e/1FAIpQLSdkRhGhJpsgc_0LxAmJpemlf7bni8Qs0ZUmovOVvHaOwOQyhA/viewform?usp=pp_url&amp;entry.603740146=Fall2026&amp;entry.1577539103=Principal%20Component%20Analysis&amp;entry.1379071784=IS382)]]
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+  "highlightStyle": "solarized-light",
+  "highlightLanguage": "R",
+  "highlightLines": true,
+  "countIncrementalSlides": false,
+  "ratio": "16:9",
+  "navigation": {
+    "scroll": false
+  }
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<!-- Source: https://www.garrickadenbuie.com/blog/xaringan-tip-logo-all-slides/ -->
+<style>
+.logo {
+  background-image: url(images/hex/DATA606.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 2em;
+  right: 0.5em;
+  width: 55px;
+  height: 64px;
+  z-index: 0;
+}
+</style>
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    ':not(.title-slide)' +
+    // add additional classes to exclude here, e.g.
+    // ':not(.inverse)' +
+    ':not(.hide-logo)'
+  )
+  .forEach(el => {
+    el.innerHTML += '<div class="logo"></div>';
+  });
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
