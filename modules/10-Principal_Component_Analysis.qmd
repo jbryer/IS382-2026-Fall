@@ -14,6 +14,12 @@ Download the Rmarkdown file and open it in RStudio. The first part will walk thr
 
 ## Supplemental Videos
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WIMgMBYqhKE?si=KSSMyyfY4msqJg1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zMfomUERNww?si=cnjDkPiy9cacl-LK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FgakZw6K1QQ?si=jp5ovjLJJJhV-TZF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FgakZw6K1QQ?si=C4A9S2UxoELrNTf9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
