@@ -1,0 +1,16 @@
+---
+title: "Clustering Methods"
+date: 2026-11-09
+draft: false
+description: "Slides and recording for the *Clustering Methods* meetup."
+categories: ["Meetups"]
+image: "11-Clustering_Methods.png"
+---
+
+
+[Click here](/slides/11-Clustering_Methods.html#1) to open the slides([PDF](/slides/11-Clustering_Methods.pdf)).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B4MU7ORbCWI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
